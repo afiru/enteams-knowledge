@@ -24,9 +24,12 @@
 <script type='text/javascript' src="<?php echo get_bloginfo('template_url'); ?>/js/animsition.min.js"></script>
 <script type="text/javascript" src='<?php echo get_bloginfo('template_url'); ?>/js/config.js'> </script>
 <script type="text/javascript" src='<?php echo get_bloginfo('template_url'); ?>/js/bxslider_setting.js'> </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" id='def_set_css' type="text/css" href="<?php echo get_bloginfo('template_url'); ?>/css/basestyle.css?ver=<?php echo date('Y-m-d'); ?>" media="all">
 </head>
-<body id="page_top">
+<body id="page_top" class="bg_F1F5F9">
 <div id="page_wapper_master">
 <header class="header">
 <?php get_template_part('include_files/header/headerPc'); ?>

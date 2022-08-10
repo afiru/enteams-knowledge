@@ -43,8 +43,12 @@ svg {
     text-align: justify;
     text-justify: inter-ideograph;    
 }
-
-
+.bg_F1F5F9 {
+    background: #F1F5F9;
+}
+.bg_fff {
+    background: #FFF;
+}
 //トップページ部分
 @import 'main_include/header/_header_pc';
 @import 'main_include/header/_header_sp';
