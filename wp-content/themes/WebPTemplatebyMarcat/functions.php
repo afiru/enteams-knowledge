@@ -176,3 +176,22 @@ function stringOverFlow($strings, $length) {
     $output = mb_strimwidth($output, 0, $length, "...", "UTF-8");
     return $output;
 }
+
+// ログイン画面のロゴ変更
+function login_logo() {
+  echo '<style type="text/css">.login h1 a {background-image: url('.get_bloginfo('template_directory').'/img/logo.svg);width:150.31px;height:18.48px;background-size:150.31px 18.48px;}..wp-core-ui .button-primary{    background: #3EA8FF;
+    border-color: #3EA8FF;}</style>';
+}
+add_action('login_head', 'login_logo');
+ 
+// ログイン画面のロゴURL
+function custom_login_logo_url() {
+	return get_bloginfo( 'url' );
+}
+add_filter( 'login_headerurl', 'custom_login_logo_url' );
+ 
+// ログイン画面のロゴタイトル
+function custom_login_logo_url_title() {
+	return 'トップページを表示';
+}
+add_filter( 'login_headertitle', 'custom_login_logo_url_title' );
