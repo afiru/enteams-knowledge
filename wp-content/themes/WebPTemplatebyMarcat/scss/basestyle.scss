@@ -1,0 +1,68 @@
+@charset "utf-8";
+@import 'sass_base/mixin';
+@import 'sass_base/base';
+@import 'sass_base/animate';
+@import 'sass_base/_parallax';
+@import 'sass_base/_page_animete';
+@import 'sass_base/icon_arrow';
+@import 'sass_base/coding_guideline';
+.wapper {
+    @include wapper_setting();    
+}
+//基本設定
+ul,li,dd,dt,dh {
+    list-style: none;
+}
+svg {
+    display: block;
+}
+
+.pc_only {
+    @include pc_only();
+}
+.sp_only {
+    @include sp_only();
+}
+
+.t_center {
+    text-align: center;
+}
+
+@for $i from 0 through 8 {
+    .pc_order_#{$i} {
+        order: $i;
+        @include media($sp) {
+            order: unset;
+        }
+    }
+    .fw_#{$i*100} {
+        font-wieght:$i*100;
+    }
+}
+.text_justify {
+    text-align: justify;
+    text-justify: inter-ideograph;    
+}
+
+
+//トップページ部分
+@import 'main_include/header/_header_pc';
+@import 'main_include/header/_header_sp';
+//トップページ部分
+@import 'main_include/index/_index';
+
+@import 'main_include/page/_contact';
+@import 'main_include/page/_confirm';
+@import 'main_include/page/_thanks';
+
+//フッター部分
+@import 'main_include/footer/_footer';
+@import 'lightbox.min';
+
+.test{
+    @include rsFontSize(16 , 16 , 14 );
+    @include media($tab) {
+        font-size: 16px;
+    }
+    
+}
