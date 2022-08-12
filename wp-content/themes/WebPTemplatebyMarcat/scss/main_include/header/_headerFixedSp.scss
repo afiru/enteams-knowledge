@@ -1,5 +1,5 @@
 .headerSpFixed{
-    
+    position: fixed;
 }
 .headerSpGnav{
     @include marginPercent(375 , 5 , auto , 0 , auto);
