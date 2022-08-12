@@ -1,10 +1,49 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : 2022/08/12, 10:04:13
-    Author     : SPG-1105
-*/
+.postKnowledgeLoopLxc {
+    @include ontener_width(830 , 385);
+    &:nth-child(n+3) {
+        @include marginPercent(830 , 25 , 0 , 0 , 0 );
+    }
+}
+.btmPostKnowledgeThumbs {
+    @include ontener_width(385 , 90);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    @include kadomaru(10px);
+}
+.btmPostKnowledgeThumbsWap {
+    @include ontener_width(90 , 60);
+}
+.secPostKnowledgeLoop {
+    @include ontener_width(385 , 275);
+}
+.linkPostKnowledgeLoop {
+    font-size: 14px;
+    @include lineheight(14,19);
+    color: #111;
+    text-decoration: none;
+    font-weight: 800;
+}
+.catsPostKnowledgeLoop {
+    @include marginPercent(385 , 15 , 0 , 0 , 0 );
+}
+.liPostKnowledgeLoop {
+    display: inline-block;    
+    &:nth-child(n+2) {
+        margin: 0 0 0 10px;
+    }
+}
+.btmPostKnowledgeLoop {
+    padding: 2px 10px;
+    display: inline-block;
+    @include kadomaru(3px);
+    font-size: 14px;
+    text-decoration: none;
+}
 
+.timeBookClipsPostKnowledgeLoop {
+    font-size: 14px;
+    @include marginPercent(385 , 15 , 0 , 0 , 0 );
+}

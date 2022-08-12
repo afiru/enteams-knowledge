@@ -1,3 +1,4 @@
+<?php $user = wp_get_current_user(); ?>
 <?php $avive = getNowActive(); ?>
 <div class="sp_only headerSpFixed">
     <nav class="headerSpGnav">

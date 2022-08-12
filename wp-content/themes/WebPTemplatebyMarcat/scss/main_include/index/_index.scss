@@ -1,1 +1,11 @@
-@charset "utf-8";
+.base2Column {
+    margin: 50px auto 110px auto;
+}
+.sidebarKnowledge {
+    @include ontener_width(1200 , 320);
+    @include kadomaru(10px);
+    @include paddingPercent(1200 , 10 , 10 , 70 , 10 );
+}
+.main2Column {
+    @include ontener_width(1200 , 830);
+}
