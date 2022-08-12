@@ -1,4 +1,5 @@
 <div class="bg_fff sidebarKnowledge">
+    <h1 class="sp_only t_center h1sidebarKnowledge">SEMINAR MENU</h1>
     <?php $categories = get_categories("parent=2&hide_empty=0&orderby=id&order=asc"); ?>
     <?php foreach ($categories as $categorie): ?>
         <nav class="navSidebarKnowledge <?php echo $categorie->slug; ?>NavSidebarKnowledge">
