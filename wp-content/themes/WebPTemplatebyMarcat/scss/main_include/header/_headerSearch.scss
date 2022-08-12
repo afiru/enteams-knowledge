@@ -1,10 +1,103 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : 2022/08/12, 11:40:26
-    Author     : SPG-1105
-*/
+.headerSearch {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #FFF;
+    padding: 20px 0;
+}
+.headerSearchWap {
+    
+}
+.btmClosedSearch {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    @include kadomaru(5px);
+    background: #3EA8FF;
+    color: #FFF;
+    text-decoration: none;
+}
+.headerSearchLxc {
+    @include ontener_width(1200 , 1160 );
+    margin: 40px auto 0 auto;
+}
+.headerinputSearch {
+    
+}
+.headerinputSearchLxc {
+    position: relative;
+}
+.inputSearch {
+    @include kadomaru(5px);
+    background: #EDF2F7;
+    width: 100%;
+    height: 60px;
+    padding: 15px 10px;
+    border: none;
+}
+.btmSearchFree {
+    widows: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 0; bottom: 0;
+    margin: auto;
+}
 
+.secHeaderSearchCats {
+    @include ontener_width(1200 , 1160 );
+    margin: 40px auto 0 auto;
+}
+.h2SecHeaderSearchCats {
+    font-size: 20px;
+    font-weight: 800;
+}
+.secHeaderSearchCatsFx {
+    margin: 20px auto 0 auto;
+    justify-content: space-between;
+}
+.liHeaderSearchCatsFx {
+    @include ontener_width(1160 , 180);
+    aspect-ratio: 180 / 160;    
+    margin: 20px 0 0 0;    
+    @include media($max800) {
+        @include ontener_width(572 , 180 );
+    }
+}
+
+.btmHeaderSearchCatsFx {
+    border: 1px solid #93A5B1;
+    @include kadomaru(10px);
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #111;
+    background: #FFF;
+    transition-duration: 0.5s;
+    @include paddingPercent(180 , 30 , 0 , 38 , 0 );
+}
+.btmHeaderSearchCatsFx {
+    &:hover {
+        opacity: 0.6;
+    }
+}
+.btmHeaderSearchCatsFx .iconTitle {
+    @include ontener_width(180 , 60 );
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+.h2sidebarSubCatstitle {
+    @include marginPercent(180 , 10 , 0 , 0 , 0 );
+    @include rsFontSize(16 , 16 , 16 );
+}
