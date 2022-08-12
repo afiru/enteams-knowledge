@@ -1,0 +1,68 @@
+.h1sidebarKnowledge {
+    font-size: 16px;
+    cursor: pointer;
+    @include media($sp) {
+        order: 2;
+        @include fontVwSp(375 , 16);
+    }
+}
+.navSidebarKnowledge {
+    font-size: 14px;
+    @include media($sp) {
+        @include fontVwSp(375 , 14);
+    }
+    &:nth-child(n+3) {
+        margin: 40px 0 0 0;
+    }
+}
+.navSidebarKnowledge .titleIcon,.sidebarSubCatstitleIconFx {
+    justify-content: flex-start;
+    padding: 10px 5px;
+    border-bottom: 1px solid #93A5B1;
+    color: #111;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    &:hover {
+        opacity: 0.6;
+    }
+}
+.navSidebarKnowledge .titleIcon .iconTitle {
+    width: 20px;
+}
+.navSidebarKnowledge .h2titleSidebarKnowledge{
+    margin: 0 0 0 10px;
+    font-size: 14px;
+    @include media($sp) {
+        @include fontVwSp(375 , 14);
+    }
+}
+.sidebarSubCats {
+    margin: 0 0 0 20px;    
+}
+.sidebarSubSubCats {
+    margin: 0 0 0 10px;
+}
+.sidebarSubCatstitleIconFx {
+    font-size: 14px;
+    justify-content: flex-start;
+    padding: 10px 5px;
+    border-bottom: 1px solid #93A5B1;
+    color: #111;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    @include media($sp) {
+        @include fontVwSp(375 , 14);
+    }
+    &:hover {
+        opacity: 0.5;
+    }
+}
+.navSidebarKnowledge .h2sidebarSubCatstitle {
+    font-size: 14px;
+    margin: 0 0 0 10px;
+    @include media($sp) {
+        @include fontVwSp(375 , 14);
+    }
+}

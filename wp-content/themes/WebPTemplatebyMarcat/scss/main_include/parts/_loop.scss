@@ -1,5 +1,8 @@
 .postKnowledgeLoopLxc {
     @include ontener_width(830 , 385);
+    @include media($max1000) {
+        @include ontener_width(830 , 390);
+    }
     &:nth-child(n+3) {
         @include marginPercent(830 , 25 , 0 , 0 , 0 );
     }
@@ -20,7 +23,7 @@
     @include ontener_width(385 , 275);
 }
 .linkPostKnowledgeLoop {
-    font-size: 14px;
+    @include rsFontSize(14 , 14 , 14 );
     @include lineheight(14,19);
     color: #111;
     text-decoration: none;
@@ -45,25 +48,44 @@
 }
 
 .timeBookClipsPostKnowledgeLoop {
-    font-size: 14px;
+    @include rsFontSize(14 , 14 , 14 );
     @include marginPercent(385 , 15 , 0 , 0 , 0 );
     justify-content: flex-start;
 }
 .timePostKnowledgeLoop {
-    font-size: 10px;
+    @include rsFontSize(10 , 10 , 10 );
 }
 .bookingPostKnowledgeLoop {
-    font-size: 10px;
-    margin: 0 0 0 15px;
+    @include rsFontSize(10 , 10 , 10 );
+    margin: 0 0 0 25px;
     color: #93A5B1;
     font-weight: 600;
+    @include media($max1000) {
+        margin: 0 0 0 1.5vw; 
+    }
 }
 .iconCountBookingsLoop {
     background: url(../img/book.svg) no-repeat left center;
+    background-size: auto 100%;
+    padding: 2px 0 2px 25px;
+    @include media($max1000) {
+        padding: 2px 0 2px 2.5vw;
+    }
 }
 .clipsPostKnowledgeLoop {
-    font-size: 10px;
-    margin: 0 0 0 15px; 
+    @include rsFontSize(10 , 10 , 10 );
+    margin: 0 0 0 25px; 
     color: #93A5B1;
     font-weight: 600;
+    @include media($max1000) {
+        margin: 0 0 0 1.5vw; 
+    }
+}
+.iconClipsLoop {
+    background: url(../img/clips.svg) no-repeat left center;
+    background-size: auto 100%;
+    padding: 2px 0 2px 25px;
+    @include media($max1000) {
+        padding: 2px 0 2px 2.5vw;
+    }
 }
