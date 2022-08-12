@@ -1,10 +1,14 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : 2022/08/12, 11:40:19
-    Author     : SPG-1105
-*/
-
+.headerSpFixed{
+    
+}
+.headerSpGnav{
+    @include marginPercent(375 , 5 , auto , 0 , auto);
+}
+.ulHeaderSpGnav{
+    display: flex;
+    justify-content: space-around;
+    background: #FFF;
+}
+.liHeaderSpGnav{
+    @include ontener_width(375 , 30);
+}
