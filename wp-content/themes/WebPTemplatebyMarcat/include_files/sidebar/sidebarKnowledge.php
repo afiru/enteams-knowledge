@@ -2,7 +2,7 @@
     <?php $categories = get_categories("parent=1&hide_empty=0&orderby=id&order=asc"); ?>
     <?php foreach ($categories as $categorie): ?>
         <nav class="navSidebarKnowledge <?php echo $categorie->slug; ?>NavSidebarKnowledge">
-            <div class="display_flex_center titleIcon">
+            <a href="<?php echo get_category_link($categorie->cat_ID); ?>"class="display_flex_center titleIcon">
                 <?php $icon = get_post_custom_thumbsdata(SCF::get_term_meta( $categorie->cat_ID, 'category', 'iconCat' )); ?>
                 <?php if(!empty($icon)): ?>
                     <figure class="iconTitle">                
@@ -10,13 +10,13 @@
                     </figure>
                 <?php endif; ?>
                 <h2 class="h2titleSidebarKnowledge"><?php echo $categorie->cat_name; ?></h2>
-            </div>
+            </a>
             <?php $subCats = get_categories("parent=$categorie->cat_ID&hide_empty=0&orderby=id&order=asc"); ?>
             <?php if(!empty($subCats)): ?>
                 <ul class="sidebarSubCats">
                     <?php foreach ($subCats as $subCat): ?>
                         <li class="liSidebarSubCats">
-                            <div class="display_flex_center sidebarSubCatstitleIconFx">
+                            <a href="<?php echo get_category_link($subCat->cat_ID); ?>" class="display_flex_center sidebarSubCatstitleIconFx">
                                 <?php $icon = get_post_custom_thumbsdata(SCF::get_term_meta( $subCat->cat_ID, 'category', 'iconCat' )); ?>
                                 <?php if(!empty($icon)): ?>
                                     <figure class="iconTitle">                
@@ -24,14 +24,14 @@
                                     </figure>
                                 <?php endif; ?>
                                 <h2 class="h2sidebarSubCatstitle"><?php echo $subCat->cat_name; ?></h2>
-                            </div>
+                            </a>
                         </li>
                         <?php $subSubCats = get_categories("parent=$subCat->cat_ID&hide_empty=0&orderby=id&order=asc"); ?>
                         <?php if(!empty($subSubCats)): ?>
                             <ul class="sidebarSubSubCats">
                                 <?php foreach ($subSubCats as $subSubCat): ?>
                                     <li class="liSidebarSubSubCats">
-                                        <div class="display_flex_center sidebarSubCatstitleIconFx">
+                                        <a href="<?php echo get_category_link($subSubCat->cat_ID); ?>" class="display_flex_center sidebarSubCatstitleIconFx">
                                             <?php $icon = get_post_custom_thumbsdata(SCF::get_term_meta( $subSubCat->cat_ID, 'category', 'iconCat' )); ?>
                                             <?php if(!empty($icon)): ?>
                                                 <figure class="iconTitle">                
@@ -39,14 +39,14 @@
                                                 </figure>
                                             <?php endif; ?>
                                             <h2 class="h2sidebarSubCatstitle"><?php echo $subSubCat->cat_name; ?></h2>
-                                        </div>
+                                        </a>
                                     </li>
                                     <?php $subSubSubCats = get_categories("parent=$subSubCat->cat_ID&hide_empty=0");  ?>
                                     <?php if(!empty($subSubSubCats)): ?>
                                         <ul class="sidebarSubSubSubCats">
                                             <?php foreach ($subSubSubCats as $subSubSubCat): ?>
                                             <li class="liSidebarSubSubSubCats">
-                                                <div class="display_flex_center sidebarSubCatstitleIconFx">
+                                                <a href="<?php echo get_category_link($subSubSubCat->cat_ID); ?>" class="display_flex_center sidebarSubCatstitleIconFx">
                                                     <?php $icon = get_post_custom_thumbsdata(SCF::get_term_meta( $subSubSubCat->cat_ID, 'category', 'iconCat' )); ?>
                                                     <?php if(!empty($icon)): ?>
                                                         <figure class="iconTitle">                
@@ -54,7 +54,7 @@
                                                         </figure>
                                                     <?php endif; ?>
                                                     <h2 class="h2sidebarSubCatstitle"><?php echo $subSubSubCat->cat_name; ?></h2>
-                                                </div>
+                                                </a>
                                             </li>
                                             <?php endforeach; ?>
                                         </ul>

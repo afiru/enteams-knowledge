@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,4 +35,6 @@
 <header class="header">
 <?php get_template_part('include_files/header/headerPc'); ?>
 <?php get_template_part('include_files/header/headerSp'); ?>
+<?php get_template_part('include_files/header/headerSearch'); ?>
 </header>
+<?php get_template_part('include_files/header/headerFixedSp'); ?>

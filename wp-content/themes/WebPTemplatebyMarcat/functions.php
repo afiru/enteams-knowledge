@@ -195,3 +195,59 @@ function custom_login_logo_url_title() {
 	return 'トップページを表示';
 }
 add_filter( 'login_headertitle', 'custom_login_logo_url_title' );
+
+
+function my_admin_style(){
+    wp_enqueue_style( 'my_admin_style', get_template_directory_uri().'/css/myAdminStyle.css' );
+}
+add_action( 'admin_enqueue_scripts', 'my_admin_style' );
+
+//ヘッダーのアクティブがどれに向いているのかをチェック
+function getNowActive() {
+    $cat['knowledge'] = '';
+    $cat['seminar'] = '';
+    $cat['topics'] = '';
+    $cat['NowCatID'] =1;
+    
+    if(is_home()){
+        $cat['knowledge'] = 'active';
+        $cat['NowCatID'] =1;
+    }
+    if(is_category()) {
+        if ( cat_is_ancestor_of( 1, $cat ) or is_category( 1 ) ){
+            $cat['knowledge'] = 'active';
+            $cat['NowCatID'] =1;
+        }
+        elseif ( cat_is_ancestor_of( 2, $cat ) or is_category( 2 ) ){
+            $cat['seminar'] = 'active';
+            $cat['NowCatID'] =2;
+        }
+        elseif ( cat_is_ancestor_of( 51, $cat ) or is_category( 51 ) ){
+            $cat['topics'] = 'active';
+            $cat['NowCatID'] =51;
+        }
+        else {
+            $cat['knowledge'] = 'active';
+            $cat['NowCatID'] =1;
+        }        
+    }
+    if(is_single()) {
+        if ( in_category(1) || post_is_in_descendant_category(1) ){
+            $cat['knowledge'] = 'active';
+            $cat['NowCatID'] =1;
+        }
+        elseif ( in_category(2) || post_is_in_descendant_category(2) ){
+            $cat['seminar'] = 'active';
+            $cat['NowCatID'] =2;
+        }
+        elseif ( in_category(51) || post_is_in_descendant_category(51) ){
+            $cat['topics'] = 'active';
+            $cat['NowCatID'] =51;
+        }
+        else {
+            $cat['knowledge'] = 'active';
+            $cat['NowCatID'] =1;
+        }
+    }
+    return $cat;
+}

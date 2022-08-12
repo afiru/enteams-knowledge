@@ -1,3 +1,17 @@
 <?php get_header(); ?>
-<?php get_template_part( 'include_files/temp_search/temp_search', get_the_header_temp_select() ); ?>
+<?php $searchCatID = filter_input(INPUT_GET, 'searchCat', FILTER_VALIDATE_INT); ?>
+<?php 
+if($searchCatID===1){
+    get_template_part('include_files/search/searchKnowledge');
+}
+elseif($searchCatID===2){
+    get_template_part('include_files/search/searchSeminar');
+}
+elseif($searchCatID===51) {
+    get_template_part('include_files/search/searchTopics');
+}
+else {
+    get_template_part('include_files/search/searchKnowledge');
+}
+?>
 <?php get_footer(); ?>
