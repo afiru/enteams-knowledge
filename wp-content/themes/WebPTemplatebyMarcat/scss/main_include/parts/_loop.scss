@@ -79,6 +79,7 @@
     background: url(../img/book.svg) no-repeat left center;
     background-size: auto 100%;
     padding: 2px 0 2px 25px;
+    cursor: pointer;
     @include media($max1000) {
         padding: 2px 0 2px 2.5vw;
     }
@@ -102,6 +103,7 @@
     background: url(../img/clips.svg) no-repeat left center;
     background-size: auto 100%;
     padding: 2px 0 2px 25px;
+    cursor: pointer;
     @include media($max1000) {
         padding: 2px 0 2px 2.5vw;
     }
