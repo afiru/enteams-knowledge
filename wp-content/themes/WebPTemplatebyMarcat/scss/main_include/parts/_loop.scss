@@ -27,6 +27,7 @@
     font-weight: 800;
 }
 .catsPostKnowledgeLoop {
+    justify-content: flex-start;
     @include marginPercent(385 , 15 , 0 , 0 , 0 );
 }
 .liPostKnowledgeLoop {
@@ -36,14 +37,33 @@
     }
 }
 .btmPostKnowledgeLoop {
-    padding: 2px 10px;
+    padding: 2px 10px 4px;
     display: inline-block;
     @include kadomaru(3px);
-    font-size: 14px;
+    font-size: 12px;
     text-decoration: none;
 }
 
 .timeBookClipsPostKnowledgeLoop {
     font-size: 14px;
     @include marginPercent(385 , 15 , 0 , 0 , 0 );
+    justify-content: flex-start;
+}
+.timePostKnowledgeLoop {
+    font-size: 10px;
+}
+.bookingPostKnowledgeLoop {
+    font-size: 10px;
+    margin: 0 0 0 15px;
+    color: #93A5B1;
+    font-weight: 600;
+}
+.iconCountBookingsLoop {
+    background: url(../img/book.svg) no-repeat left center;
+}
+.clipsPostKnowledgeLoop {
+    font-size: 10px;
+    margin: 0 0 0 15px; 
+    color: #93A5B1;
+    font-weight: 600;
 }
