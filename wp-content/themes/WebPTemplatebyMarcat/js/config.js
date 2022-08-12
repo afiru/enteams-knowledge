@@ -17,4 +17,16 @@ $(function () {
         $('.jsuserMenuHeaderPc').fadeOut(500);
         $('.jsfixedBackBtm').fadeOut(500);
     });
+    
+    $('.jsbtmHeaderPcGnavSearch').on('click',function(){
+        $('.jsheaderSearch').fadeIn(500);
+    });
+    
+    $('.jsbtmClosedSearch').on('click',function(){
+        $('.jsheaderSearch').fadeIn(500);
+    });
+    $('.jsbtmClosedSearch').on('click',function(){
+        $('.jsheaderSearch').fadeOut(500);
+    });
+    
 });
