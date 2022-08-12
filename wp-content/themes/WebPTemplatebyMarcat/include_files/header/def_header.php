@@ -21,10 +21,7 @@
     var rest_url = "<?php echo home_url('/wp-json/wp/v2/'); ?>";
 </script>
 <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script type='text/javascript' src="//cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-<script type='text/javascript' src="<?php echo get_bloginfo('template_url'); ?>/js/animsition.min.js"></script>
 <script type="text/javascript" src='<?php echo get_bloginfo('template_url'); ?>/js/config.js'> </script>
-<script type="text/javascript" src='<?php echo get_bloginfo('template_url'); ?>/js/bxslider_setting.js'> </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">

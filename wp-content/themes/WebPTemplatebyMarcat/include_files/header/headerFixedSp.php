@@ -29,7 +29,7 @@
                         <ul class="ulTopicsHeaderSp">
                             <?php while ( $query1->have_posts() ): $query1->the_post(); ?>
                             <li class="display_flex_stretch liTopicsHeaderSp">
-                                <time class="timeTopicsHeaderSp"><?php echo get_the_date('Y.m.d'); ?></time>
+                                <time class="timeTopicsHeaderSp"><?php echo get_the_date('Y.m.d',$post->ID); ?></time>
                                 <h4 class="h4TopicsHeaderSp"><?php echo get_the_title($post->ID); ?></h4>
                             </li>
                             <?php endwhile; wp_reset_postdata(); ?>

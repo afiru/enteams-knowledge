@@ -33,7 +33,7 @@
                                 <ul class="ulTopicsHeaderPc">
                                     <?php while ( $query1->have_posts() ): $query1->the_post(); ?>
                                     <li class="display_flex_stretch liTopicsHeaderPc">
-                                        <time class="timeTopicsHeaderPc"><?php echo get_the_date('Y.m.d'); ?></time>
+                                        <time class="timeTopicsHeaderPc"><?php echo get_the_date('Y.m.d',$post->ID); ?></time>
                                         <h4 class="h4TopicsHeaderPc"><?php echo get_the_title($post->ID); ?></h4>
                                     </li>
                                     <?php endwhile; wp_reset_postdata(); ?>
