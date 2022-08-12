@@ -6,7 +6,7 @@
         </section>
         <section class="display_flex_center secDateRightBar">
             <h3 class="cl_93A5B1 h3secDateRightBar">お気に入り</h3>
-            <span class="countBookmarks jsiconCountBookingsLoop"><?php echo SCF::get('countPosts'); ?></span>
+            <span class="countBookmarks jsiconCountBookingsLoop" data-postID="<?php echo $post->ID; ?>"><?php echo SCF::get('countPosts'); ?></span>
         </section>
     </div>
     

@@ -7,7 +7,7 @@
             <span class="iconCountBookingsLoop jsiconCountBookingsLoop"><?php echo SCF::get('countPosts'); ?></span>
         </div>
         <div class="clipsPostKnowledgeLoop btmBookingClipsClips">
-            <span class="iconClipsLoop jsiconClipsLoop">クリップする</span>
+            <span class="iconClipsLoop jsiconClipsLoop" data-postID="<?php echo $post->ID; ?>">クリップする</span>
         </div>
     </div>
 </div>

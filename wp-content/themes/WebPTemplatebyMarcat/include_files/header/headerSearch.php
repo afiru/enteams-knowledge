@@ -24,7 +24,7 @@
             <?php
                 $args = [
                     'child_of' => $avive['NowCatID'],
-                    'hide_empty' => 0,
+                    'hide_empty' => 1,
                     'orderby'  => 'id',
                     'order'  => 'ASC',
                 ];

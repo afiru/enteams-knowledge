@@ -13,7 +13,5 @@
             <?php get_template_part('include_files/parts/loop'); ?>
         <?php endwhile; // end of the loop. ?>
     </div>
-    <div class="pageNavi">
-        <?php wp_pagenavi(array('query' => $query1)); ?>
-    </div>
+
 <?php wp_reset_postdata(); endif; ?>

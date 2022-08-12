@@ -1,6 +1,6 @@
 <div class="bg_fff sidebarKnowledge">
     <h1 class="sp_only t_center h1sidebarKnowledge jsh1sidebarKnowledge">KNOWLEDGE MENU</h1>
-    <?php $categories = get_categories("parent=1&hide_empty=0&orderby=id&order=asc"); ?>
+    <?php $categories = get_categories("parent=1&hide_empty=1&orderby=id&order=asc"); ?>
     <div class="jsnavSidebarKnowledge navSidebarKnowledgeLxc">
     <?php foreach ($categories as $categorie): ?>    
         <nav class="navSidebarKnowledge <?php echo $categorie->slug; ?>NavSidebarKnowledge">
@@ -13,7 +13,7 @@
                 <?php endif; ?>
                 <h2 class="h2titleSidebarKnowledge"><?php echo $categorie->cat_name; ?></h2>
             </a>
-            <?php $subCats = get_categories("parent=$categorie->cat_ID&hide_empty=0&orderby=id&order=asc"); ?>
+            <?php $subCats = get_categories("parent=$categorie->cat_ID&hide_empty=1&orderby=id&order=asc"); ?>
             <?php if(!empty($subCats)): ?>
                 <ul class="sidebarSubCats">
                     <?php foreach ($subCats as $subCat): ?>
@@ -28,7 +28,7 @@
                                 <h2 class="h2sidebarSubCatstitle"><?php echo $subCat->cat_name; ?></h2>
                             </a>
                         </li>
-                        <?php $subSubCats = get_categories("parent=$subCat->cat_ID&hide_empty=0&orderby=id&order=asc"); ?>
+                        <?php $subSubCats = get_categories("parent=$subCat->cat_ID&hide_empty=1&orderby=id&order=asc"); ?>
                         <?php if(!empty($subSubCats)): ?>
                             <ul class="sidebarSubSubCats">
                                 <?php foreach ($subSubCats as $subSubCat): ?>
@@ -43,7 +43,7 @@
                                             <h2 class="h2sidebarSubCatstitle"><?php echo $subSubCat->cat_name; ?></h2>
                                         </a>
                                     </li>
-                                    <?php $subSubSubCats = get_categories("parent=$subSubCat->cat_ID&hide_empty=0");  ?>
+                                    <?php $subSubSubCats = get_categories("parent=$subSubCat->cat_ID&hide_empty=1");  ?>
                                     <?php if(!empty($subSubSubCats)): ?>
                                         <ul class="sidebarSubSubSubCats">
                                             <?php foreach ($subSubSubCats as $subSubSubCat): ?>
