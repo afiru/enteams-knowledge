@@ -2,7 +2,7 @@
 <?php $avive = getNowActive(); ?>
 <div class="pc_only headerPcWap">
     <div class="bg_fff headerPc">
-        <div class="wapper headerPcFx">
+        <div class="wapper display_flex_center headerPcFx">
             <a class="logoHeaderPc" href="<?php echo home_url('/'); ?>">konwnotes</a>
             <nav class="headerPcGnav">
                 <ul class="display_flex_center ulHeaderPcGnav">
@@ -28,7 +28,7 @@
                         <?php $args="cat=51&posts_per_page=5"; ?>
                         <?php $query1 = new WP_Query( $args ); ?>
                         <?php if ( $query1->have_posts() ): ?>
-                            <nav class="topicsHeaderPc">
+                            <nav class="topicsHeaderPc jstopicsHeaderPc">
                                 <h3 class="h3UserMenuHeaderPc"><?php echo $user->display_name;?>へのトピックス情報</h3>
                                 <ul class="ulTopicsHeaderPc">
                                     <?php while ( $query1->have_posts() ): $query1->the_post(); ?>
@@ -50,7 +50,7 @@
                                 <img loading="lazy" loading="lazy" src="<?php echo $img[0]; ?>" alt="<?php echo $user->display_name;?>画像" width="30" height="30" />
                             <?php endif; ?>
                         </div>
-                        <nav class="userMenuHeaderPc">
+                        <nav class="userMenuHeaderPc jsuserMenuHeaderPc">
                             <h3 class="h3UserMenuHeaderPc"><?php echo $user->display_name;?></h3>
                             <ul class="userItemHeaderPc">
                                 <li class="liUserItemHeaderPc">
@@ -63,7 +63,7 @@
                                     <a class="btmUserItemHeaderPc itemUserItemHeaderPc03" href="<?php echo home_url('/wp-admin/edit-tags.php?taxonomy=category'); ?>">カテゴリーの管理</a>
                                 </li>
                             </ul>
-                            <a class="btmLogoutItemHeaderPc itemLogoutItemHeaderPc" href="<?php echo home_url('/wp-login.php?action=logout'); ?>">ログアウト</a>
+                            <a class="btmLogoutItemHeaderPc itemLogoutItemHeaderPc" href="<?php echo home_url('/wp-login.php?action=logout'); ?>"><spna class="iconLogout">ログアウト</spna></a>
                         </nav>
                     </li>
                 </ul>

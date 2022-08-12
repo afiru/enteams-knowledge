@@ -59,7 +59,7 @@
                             <a class="btmUserItemHeaderSp itemUserItemHeaderSp03" href="<?php echo home_url('/wp-admin/edit-tags.php?taxonomy=category'); ?>">カテゴリーの管理</a>
                         </li>
                     </ul>
-                    <a class="btmLogoutItemHeaderSp itemLogoutItemHeaderSp" href="<?php echo home_url('/wp-login.php?action=logout'); ?>">ログアウト</a>
+                    <a class="btmLogoutItemHeaderSp itemLogoutItemHeaderSp" href="<?php echo home_url('/wp-login.php?action=logout'); ?>"><spna class="iconLogout">ログアウト</spna></a>
                 </nav>
             </li>
         </ul>

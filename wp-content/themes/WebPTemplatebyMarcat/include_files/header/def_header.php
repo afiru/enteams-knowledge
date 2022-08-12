@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,6 +27,7 @@
 <link rel="stylesheet" id='def_set_css' type="text/css" href="<?php echo get_bloginfo('template_url'); ?>/css/basestyle.css?ver=<?php echo date('Y-m-d'); ?>" media="all">
 </head>
 <body id="page_top" class="bg_F1F5F9">
+<div class="fixedBackBtm jsfixedBackBtm"></div>
 <div id="page_wapper_master">
 <header class="header">
 <?php get_template_part('include_files/header/headerPc'); ?>
@@ -35,3 +35,4 @@
 <?php get_template_part('include_files/header/headerSearch'); ?>
 </header>
 <?php get_template_part('include_files/header/headerFixedSp'); ?>
+

@@ -59,12 +59,22 @@ svg {
     color: #93A5B1;
 }
 .header {
-display: block;
+    display: block;
     position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 99999;
+}
+.fixedBackBtm {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+    background: rgba(255 , 255 , 255 , 0.2);
 }
 //トップページ部分
 @import 'main_include/header/_header_pc';
