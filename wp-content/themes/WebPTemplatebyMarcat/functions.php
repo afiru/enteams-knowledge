@@ -251,3 +251,5 @@ function getNowActive() {
     }
     return $cat;
 }
+
+add_filter( 'show_admin_bar', '__return_false' );
