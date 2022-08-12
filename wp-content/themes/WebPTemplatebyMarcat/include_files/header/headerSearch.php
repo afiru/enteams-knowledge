@@ -1,6 +1,9 @@
 <?php $avive = getNowActive(); ?>
 <div class="headerSearch">
     <div class="wapper headerSearchWap">
+        
+        <div class="btmClosedSearch jsbtmClosedSearch">閉じる</div>
+        
         <div class="headerSearchLxc">
             <div class="headerinputSearch">
                 <form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
