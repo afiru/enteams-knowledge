@@ -1,10 +1,7 @@
 @charset "utf-8";
 @import 'sass_base/mixin';
 @import 'sass_base/base';
-@import 'sass_base/animate';
-@import 'sass_base/_parallax';
-@import 'sass_base/_page_animete';
-@import 'sass_base/icon_arrow';
+
 @import 'sass_base/coding_guideline';
 .wapper {
     @include wapper_setting();    
@@ -83,6 +80,9 @@ svg {
 @import 'main_include/header/_headerSearch';
 //トップページ部分
 @import 'main_include/index/_index';
+//サイドバー
+@import 'main_include/sidebar/_sidebarKnowledge';
+@import 'main_include/sidebar/_sidebarSeminar';
 //カテゴリー設定
 @import 'main_include/category/_knowledgeMain';
 @import 'main_include/category/_seminarMain';
@@ -106,10 +106,3 @@ svg {
 @import 'main_include/footer/_footer';
 @import 'lightbox.min';
 
-.test{
-    @include rsFontSize(16 , 16 , 14 );
-    @include media($tab) {
-        font-size: 16px;
-    }
-    
-}
