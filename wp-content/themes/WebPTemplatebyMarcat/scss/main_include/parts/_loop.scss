@@ -1,10 +1,18 @@
 .postKnowledgeLoopLxc {
     @include ontener_width(830 , 385);
     @include media($max1000) {
-        @include ontener_width(830 , 390);
+        @include ontener_width(830 , 410);
+    }
+    @include media($sp) {
+        width: 100%;
     }
     &:nth-child(n+3) {
         @include marginPercent(830 , 25 , 0 , 0 , 0 );
+    }
+    @include media($sp) {
+        &:nth-child(n+2) {
+            @include marginPercent(355 , 25 , 0 , 0 , 0 );
+        }
     }
 }
 .btmPostKnowledgeThumbs {
@@ -63,6 +71,9 @@
     @include media($max1000) {
         margin: 0 0 0 1.5vw; 
     }
+    @include media($sp) {
+        margin: 0 0 0 4.5vw; 
+    }
 }
 .iconCountBookingsLoop {
     background: url(../img/book.svg) no-repeat left center;
@@ -70,6 +81,9 @@
     padding: 2px 0 2px 25px;
     @include media($max1000) {
         padding: 2px 0 2px 2.5vw;
+    }
+    @include media($sp) {
+        padding: 2px 0 2px 6.5vw;
     }
 }
 .clipsPostKnowledgeLoop {
@@ -80,6 +94,9 @@
     @include media($max1000) {
         margin: 0 0 0 1.5vw; 
     }
+    @include media($sp) {
+        margin: 0 0 0 4.5vw; 
+    }
 }
 .iconClipsLoop {
     background: url(../img/clips.svg) no-repeat left center;
@@ -87,5 +104,8 @@
     padding: 2px 0 2px 25px;
     @include media($max1000) {
         padding: 2px 0 2px 2.5vw;
+    }
+    @include media($sp) {
+        padding: 2px 0 2px 6.5vw;
     }
 }

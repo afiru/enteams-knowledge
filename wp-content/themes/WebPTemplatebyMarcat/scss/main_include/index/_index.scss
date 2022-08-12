@@ -1,11 +1,24 @@
 .base2Column {
     margin: 50px auto 110px auto;
+    @include media($sp) {
+        @include marginPercent(375 , 25 , auto , 80 , auto );
+    }
 }
 .sidebarKnowledge {
     @include ontener_width(1200 , 320);
     @include kadomaru(10px);
     @include paddingPercent(1200 , 10 , 10 , 70 , 10 );
+    @include media($sp) {
+        order: 2;
+        @include ontener_width(375 , 355);
+        @include marginPercent(375 , 25 , auto , 0 , auto );
+    }
 }
 .main2Column {
     @include ontener_width(1200 , 830);
+    @include media($sp) {
+        order: 1;
+        @include ontener_width(375 , 355);
+        margin: auto;
+    }
 }

@@ -1,6 +1,7 @@
 <div class="bg_fff sidebarKnowledge">
     <h1 class="sp_only t_center h1sidebarKnowledge">SEMINAR MENU</h1>
     <?php $categories = get_categories("parent=2&hide_empty=0&orderby=id&order=asc"); ?>
+    <div class="jsnavSidebarKnowledge navSidebarKnowledgeLxc">
     <?php foreach ($categories as $categorie): ?>
         <nav class="navSidebarKnowledge <?php echo $categorie->slug; ?>NavSidebarKnowledge">
             <a href="<?php echo get_category_link($categorie->ID); ?>"class="display_flex_center titleIcon">
@@ -68,4 +69,5 @@
             <?php endif; ?>
         </nav>
     <?php endforeach; ?>
+    </div>
 </div>

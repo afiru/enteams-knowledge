@@ -6,6 +6,10 @@
     height: 100vh;
     background: #FFF;
     padding: 20px 0;
+    @include media($sp) {
+        height: 84vh;
+        overflow: scroll;
+    }
 }
 .headerSearchWap {
     
@@ -22,6 +26,9 @@
 .headerSearchLxc {
     @include ontener_width(1200 , 1160 );
     margin: 40px auto 0 auto;
+    @include media($sp) {
+        margin: 12vw auto 0 auto;
+    }
 }
 .headerinputSearch {
     
@@ -36,6 +43,9 @@
     height: 60px;
     padding: 15px 10px;
     border: none;
+    @include media($sp) {
+        height: 12vw;
+    }
 }
 .btmSearchFree {
     widows: 30px;
@@ -44,19 +54,32 @@
     right: 10px;
     top: 0; bottom: 0;
     margin: auto;
+    @include media($sp) {
+        width: 6.666666666666667vw;
+        height: 6.666666666666667vw;
+    }
 }
 
 .secHeaderSearchCats {
     @include ontener_width(1200 , 1160 );
     margin: 40px auto 0 auto;
+    @include media($sp) {
+        margin: 12vw auto 0 auto;
+    }
 }
 .h2SecHeaderSearchCats {
     font-size: 20px;
     font-weight: 800;
+    @include media($sp) {
+        @include fontVwSp(375 , 18 );
+    }
 }
 .secHeaderSearchCatsFx {
     margin: 20px auto 0 auto;
     justify-content: space-between;
+    @include media($sp) {
+        margin: 5.333333333333333vw auto 0 auto;
+    }
 }
 .liHeaderSearchCatsFx {
     @include ontener_width(1160 , 180);
@@ -64,6 +87,9 @@
     margin: 20px 0 0 0;    
     @include media($max800) {
         @include ontener_width(572 , 180 );
+    }
+    @include media($sp) {
+        margin: 3.333333333333333vw 0 0 0;
     }
 }
 
@@ -99,5 +125,5 @@
 }
 .h2sidebarSubCatstitle {
     @include marginPercent(180 , 10 , 0 , 0 , 0 );
-    @include rsFontSize(16 , 16 , 16 );
+    @include rsFontSize(16 , 16 , 12 );
 }

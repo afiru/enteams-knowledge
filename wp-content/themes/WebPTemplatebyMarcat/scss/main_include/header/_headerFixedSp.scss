@@ -1,8 +1,13 @@
 .headerSpFixed{
-    position: fixed;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background: #FFF;
+    @include paddingPercent(375 , 5 , 0 , 5 , 0 );
 }
 .headerSpGnav{
-    @include marginPercent(375 , 5 , auto , 0 , auto);
+    @include marginPercent(375 , 0 , auto , 0 , auto);
 }
 .ulHeaderSpGnav{
     display: flex;
@@ -10,8 +15,94 @@
     background: #FFF;
 }
 .liHeaderSpGnav{
-    @include ontener_width(375 , 30);
+    position: relative;
+    @include ontener_width(375 , 75);
+}
+.btmHeaderSpGnav {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    @include ontener_width(75 , 20);    
+}
+.topicsHeaderSp {
+    display: none;
+    z-index: 999;
+    background: #FFF;
+    padding: 10px 0;
+    position: absolute;
+    right: 0;
+    bottom: 120%;
+    width: 66.66666666666667vw;
+    @include kadomaru(10px);
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.25));
+}
+.h3UserMenuHeaderSp,.h3UserMenuHeaderSp {
+    padding: 0 2.6666666666666665vw 2.6666666666666665vw 2.6666666666666665vw;
+    border-bottom: 1px solid #93A5B1;
+    font-weight: 800;
+    @include fontVwSp(375 , 16 );
+}
+.ulTopicsHeaderSp,.userItemHeaderSp {
+    padding: 0 2.6666666666666665vw 0px 2.6666666666666665v;
+}
+.liTopicsHeaderSp,.liUserItemHeaderSp {
+    padding: 2.6666666666666665vw;
+    @include fontVwSp(375 , 12 );
+}
+.timeTopicsHeaderSp {
+    width: 16.466666666666665vw;
+}
+.h4TopicsHeaderSp {
+    width: 42.2vw;
 }
 
 
-
+.userMenuHeaderSp {
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 195px; 
+    padding: 10px 0 0 0;
+    position: absolute;
+    right: 2vw;
+    bottom: 120%;
+    background: #FFF;
+    z-index: 999;
+    @include kadomaru(10px);
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.25));  
+}
+.btmUserItemHeaderSp {
+    text-decoration: none;
+    line-height: 1;
+    color: #111;
+    padding: 2px 0 2px 20px;
+}
+.itemUserItemHeaderSp01 {
+    background: url(../img/iconlogoHeaderPc.svg) no-repeat left center;
+    background: auto 14px;
+}
+.itemUserItemHeaderSp02 {
+    background: url(../img/iconCat.svg) no-repeat left center;
+    background: auto 14px;
+}
+.itemUserItemHeaderSp03 {
+    background: url(../img/iconCat.svg) no-repeat left center;
+    background: auto 14px;
+}
+.itemUserItemHeaderSp03 {
+    background: url(../img/iconSettings.svg) no-repeat left center;
+    background: auto 14px;
+}
+.btmLogoutItemHeaderSp {
+    display: block;
+    padding: 10px;
+    border-top: 1px solid #93A5B1;
+    font-size: 14px;
+    color: #111;
+    text-decoration: none;
+}
+.iconLogout {
+    background: url(../img/iconLogout.svg) no-repeat left center;
+    background: auto 14px;
+    padding: 2px 0 2px 20px;
+}

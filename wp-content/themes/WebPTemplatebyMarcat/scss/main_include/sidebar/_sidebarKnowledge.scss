@@ -3,13 +3,25 @@
     cursor: pointer;
     @include media($sp) {
         order: 2;
-        @include fontVwSp(375 , 16);
+        @include fontVwSp(375 , 18);
+        font-weight: 800;
+        @include paddingPercent(355 , 15 , 0 , 0 , 0 );
+        cursor: pointer;
     }
+}
+.navSidebarKnowledgeLxc {
+    @include media($sp) {
+        display: none;
+        @include fontVwSp(375 , 14);
+        @include ontener_width(355 , 325 );
+        margin: 0 auto;
+    }  
 }
 .navSidebarKnowledge {
     font-size: 14px;
     @include media($sp) {
         @include fontVwSp(375 , 14);
+        
     }
     &:nth-child(n+3) {
         margin: 40px 0 0 0;
@@ -46,7 +58,7 @@
 .sidebarSubCatstitleIconFx {
     font-size: 14px;
     justify-content: flex-start;
-    padding: 10px 5px;
+    padding: 10px 0px;
     border-bottom: 1px solid #93A5B1;
     color: #111;
     font-weight: 600;

@@ -1,7 +1,8 @@
 <div class="bg_fff sidebarKnowledge">
     <h1 class="sp_only t_center h1sidebarKnowledge jsh1sidebarKnowledge">KNOWLEDGE MENU</h1>
     <?php $categories = get_categories("parent=1&hide_empty=0&orderby=id&order=asc"); ?>
-    <?php foreach ($categories as $categorie): ?>
+    <div class="jsnavSidebarKnowledge navSidebarKnowledgeLxc">
+    <?php foreach ($categories as $categorie): ?>    
         <nav class="navSidebarKnowledge <?php echo $categorie->slug; ?>NavSidebarKnowledge">
             <a href="<?php echo get_category_link($categorie->cat_ID); ?>" class="display_flex_center titleIcon">
                 <?php $icon = get_post_custom_thumbsdata(SCF::get_term_meta( $categorie->cat_ID, 'category', 'iconCat' )); ?>
@@ -68,4 +69,5 @@
             <?php endif; ?>
         </nav>
     <?php endforeach; ?>
+    </div>
 </div>

@@ -25,7 +25,7 @@
                 <?php $args="cat=51&posts_per_page=5"; ?>
                 <?php $query1 = new WP_Query( $args ); ?>
                 <?php if ( $query1->have_posts() ): ?>
-                    <nav class="topicsHeaderSp">
+                    <nav class="topicsHeaderSp jstopicsHeaderSp">
                         <h3 class="h3UserMenuHeaderSp"><?php echo $user->display_name;?>へのトピックス情報</h3>
                         <ul class="ulTopicsHeaderSp">
                             <?php while ( $query1->have_posts() ): $query1->the_post(); ?>
@@ -47,7 +47,7 @@
                         <img loading="lazy" loading="lazy" src="<?php echo $img[0]; ?>" alt="<?php echo $user->display_name;?>画像" width="30" height="30" />
                     <?php endif; ?>
                 </div>
-                <nav class="userMenuHeaderSp">
+                <nav class="userMenuHeaderSp jsuserMenuHeaderSp">
                     <h3 class="h3UserMenuHeaderSp"><?php echo $user->display_name;?></h3>
                     <ul class="userItemHeaderSp">
                         <li class="liUserItemHeaderSp">
