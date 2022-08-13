@@ -30,6 +30,12 @@ $(function () {
     $('.jsbtmClosedSearch').on('click', function () {
         $('.jsheaderSearch').fadeOut(500);
     });
+    
+    //記事追従部分
+    if (window.innerWidth > 750) {
+        let headerHeight = $('.header').outerHeight(true);
+        $('.jsrightBarFx').css('top',headerHeight);
+    }
 
 
     //Spだけ

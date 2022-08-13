@@ -76,7 +76,7 @@
 }
 .secHeaderSearchCatsFx {
     margin: 20px auto 0 auto;
-    justify-content: space-between;
+    justify-content: flex-start;
     @include media($sp) {
         margin: 5.333333333333333vw auto 0 auto;
     }
@@ -84,12 +84,29 @@
 .liHeaderSearchCatsFx {
     @include ontener_width(1160 , 180);
     aspect-ratio: 180 / 160;    
-    margin: 20px 0 0 0;    
+    @include marginPercent(1160 , 20 , 0 , 0 , 0 );
     @include media($max800) {
         @include ontener_width(572 , 180 );
     }
     @include media($sp) {
-        margin: 3.333333333333333vw 0 0 0;
+        @include marginPercent(375 , 10 , 0 , 0 , 0 );
+    }
+    &:nth-child(n+2) {
+        @include marginPercent(1160 , 20 , 0 , 0 , 20 );
+        @include media($sp) {
+            @include marginPercent(375 , 10 , 0 , 0 , 0 );
+        }
+    }
+    &:nth-child(5n) {
+        @include marginPercent(1160 , 20 , 0 , 0 , 0 );
+        @include media($sp) {
+            @include marginPercent(375 , 10 , 0 , 0 , 0 );
+        }
+    }
+    &:nth-child(3n+2) {
+        @include media($sp) {
+            @include marginPercent(375 , 10 , 10 , 0 , 10 );
+        } 
     }
 }
 

@@ -1,10 +1,19 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : 2022/08/12, 11:04:54
-    Author     : SPG-1105
-*/
+.main1Column {
+    
+    @include ontener_width(1200 , 830);
+    margin: 50px auto 110px auto;
 
+    @include media($sp) {
+        order: 1;
+        @include ontener_width(375 , 355);
+        @include marginPercent(375 , 25 , auto , 80 , auto );
+    }
+}
+.postTopicsLoopFx {
+    background: #FFF;
+    @include kadomaru(10px);
+    @include paddingPercent(1200 , 10 , 20 , 20 , 20 );
+    @include media($sp) {
+        @include paddingPercent(375 , 10 , 20 , 10 , 20 );
+    }
+}

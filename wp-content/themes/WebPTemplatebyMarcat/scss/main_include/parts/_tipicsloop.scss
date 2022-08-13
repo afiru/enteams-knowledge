@@ -1,10 +1,24 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : 2022/08/12, 11:05:57
-    Author     : SPG-1105
-*/
-
+.liTopicsLoop {
+    @include paddingPercent(630 , 10 , 0 , 10 , 0);
+    border-bottom: 1px solid #93A5B1;
+    @include rsFontSize(14 , 14 , 14 );
+    @include lineheight(14 , 19 );
+    @include media($sp) {
+        @include paddingPercent(355 , 10 , 0 , 10 , 0);
+    }
+    &:last-child {
+        border-bottom:none;
+    }
+}
+.btmTopicsLoop {
+    justify-content: flex-start;
+    text-decoration: none;
+    color: #111;
+    transition-duration: 0.5s;
+    &:hover {
+        opacity: 0.6;
+    }
+}
+.h3TopicsLoop {
+    margin: 0 0 0 15px;
+}

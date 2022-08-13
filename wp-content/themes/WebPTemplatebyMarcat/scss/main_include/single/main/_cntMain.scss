@@ -1,10 +1,87 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : 2022/08/12, 14:19:33
-    Author     : SPG-1105
-*/
+.singleKnowledgeMainFx {
+    @include marginPercent(830 , 40 , 0 , 0 , 0 );
+    @include media($sp) {
+        @include marginPercent(375 , 40 , 0 , 0 , 0 );
+    }
+}
+.cntMain {
+    @include ontener_width(830 , 630);
+    @include paddingPercent(830 , 20 , 20 , 20 , 20 );
+    @include kadomaru(10px);
+    order: 1;
+    @include media($sp) {
+        width: 100%;
+        order: 2;
+        @include marginPercent(375 , 20 , 0 , 0 , 0 );
+        @include paddingPercent(375 , 20 , 10 , 20 , 10 );
+    }
+}
+.cntMain {
+    h1,h2,h3,h4,h5,p,li,ul {
+        @include lineheight(14 , 25);
+    }
+    p {
+        @include rsFontSize(14 , 14 , 12 );
+    }
+    a {
+        color: #111;
+        text-decoration: underline;
+    }
+    h1 {
+        @include rsFontSize(20 , 20 , 20 );
+        border-bottom: 1px solid #93A5B1;        
+        @include paddingPercent(630 , 0 , 0 , 10 , 0 );
+        @include marginPercent(630 , 0 , 0 , 10 , 0 );
+    }
+    p+h1,h2+h1,h3+h1,h4+h1,h5+h1,h6+h1,span+h1,.hcb_wrap+h1{
+        @include marginPercent(630 , 60 , 0 , 10 , 0 );
+    }
+    h2 {
+        @include rsFontSize(18 , 18 , 18 );
+        @include marginPercent(630 , 0 , 0 , 10 , 0 );
+    }
+    p+h2,h2+h2,h3+h2,h4+h2,h5+h2,h6+h2,span+h2,.hcb_wrap+h2{
+        @include marginPercent(630 , 40 , 0 , 10 , 0 );
+    }
+    h3 {
+        @include rsFontSize(16 , 16 , 16 );
+        border-bottom: 1px solid #93A5B1;        
+        @include marginPercent(630 , 0 , 0 , 10 , 0 );
+    }
+    p+h3,h2+h3,h3+h3,h4+h3,h5+h3,h6+h3,span+h3,.hcb_wrap+h3{
+        @include marginPercent(630 , 20 , 0 , 10 , 0 );
+    }
+}
+.hcb_wrap.hcb_wrap span {
+    @include rsFontSize(14 , 14 , 12 );
+    line-height: 1.78571428571;
+}
+.hcb_wrap pre.line-numbers {
+    @include paddingPercent(630 , 20 , 20 , 20 , 20 );
+}
+.hcb_wrap .line-numbers .line-numbers-rows {
+    display: none;
+}
+.hcb_wrap.hcb_wrap {
+    @include marginPercent(630 , 20 , 0 , 20 , 0 );
+}
+.hcb_wrap pre.line-numbers {
+    @include paddingPercent(630 , 20 , 20 , 20 , 20 );
+    @include kadomaru(10px);
+    &::-webkit-scrollbar{
+        display: none;        
+    }
+}
+.hcb_wrap.hcb_wrap code, .hcb_wrap.hcb_wrap pre {
+    background: #1A2638;
+}
 
+.btmBookingClips {
+    justify-content: flex-end;
+    @include marginPercent(630 , 60 , 0 , 0 , 0 );
+}
+.cntMain .btmBookingClips .bmtToArchiveCat {
+    @include rsFontSize(12 , 12 , 12 );
+    color: #93A5B1;
+    text-decoration: none;
+}

@@ -1,5 +1,5 @@
 .headerSpWap{
-    @include paddingPercent(375 , 10 , 0 , 0 , 0);
+    @include paddingPercent(375 , 20 , 0 , 0 , 0);
     background: #FFF;
 }
 .logoHeaderSp{
@@ -16,7 +16,7 @@
     color: #111;
 }
 .headerSpTab{
-    @include marginPercent(375 , 15 , auto , 0 , auto);
+    @include marginPercent(375 , 25 , auto , 0 , auto);
 }
 .ulheaderSpTab{
     

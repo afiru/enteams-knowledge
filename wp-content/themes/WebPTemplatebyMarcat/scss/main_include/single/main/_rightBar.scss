@@ -1,10 +1,91 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : 2022/08/12, 14:19:52
-    Author     : SPG-1105
-*/
+.rightBar {
+    @include ontener_width(830 , 180);
+    order: 2;
+    @include media($sp) {
+        width: 100%;
+        order: 1;
+    }
+}
+.rightBarFx {
+    position: sticky;
+    top: 0;
+}
+.dateRightBar {
+    @include paddingPercent(180 , 10 , 10 , 10 , 10 );
+    @include kadomaru(10px);
+    @include rsFontSize(12 , 12 , 12 );
+    @include media($sp) {
+        @include paddingPercent(375 , 20 , 10 , 20 , 10 );
+    }
+}
+.secDateRightBar {
+    @include paddingPercent(180 , 10 , 5 , 10 , 5 );
+    border-bottom: 1px solid #93A5B1;
+    @include media($sp) {
+        @include paddingPercent(375 , 10 , 5 , 10 , 5 );
+    }
+    &:last-child {
+        border-bottom: none;
+    }
+}
+.btmDateRightBar {
+    color: #93A5B1;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    &:hover{
+        opacity: 0.6;
+    }
+}
+.tocRightBar {
+    @include marginPercent(180 , 20 , 0 , 0 , 0 );
+    @include media($sp) {
+        @include marginPercent(375 , 20 , 0 , 0 , 0 );
+    }
+}
 
+.h2RightBar {
+    font-weight: 800;
+    @include rsFontSize(14,14,14);
+}
+#toc_container{
+    @include marginPercent(180 , 10 , 0 , 0 , 0 );
+    padding: 0;
+    border: none;
+    background: #FFF;
+    @include media($sp) {
+        @include marginPercent(375 , 20 , 0 , 0 , 0 );
+    }
+}
+.toc_list {
+    li {
+        
+    }
+    a {
+        color: #93A5B1;
+    }
+}
+#toc_container li {
+    @include paddingPercent(160 , 0 , 0 , 0 , 12 );
+    position: relative;
+    @include media($sp) {
+        @include paddingPercent(375 , 0 , 0 , 0 , 17 );
+    }
+    &:nth-child(n+2) {
+        @include marginPercent(160 , 15 , 0 , 0 , 0 );
+        @include media($sp) {
+            @include marginPercent(375 , 15 , 0 , 0 , 0 );
+        }
+    }
+}
+#toc_container li:before {
+    content: '●';
+    color: #93A5B1;
+    display: block;
+    @include rsFontSize(8,8,8);
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+#toc_container li a {
+    @include lineheight(10,14);
+}

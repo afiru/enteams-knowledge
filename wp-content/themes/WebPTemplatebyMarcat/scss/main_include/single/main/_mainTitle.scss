@@ -1,10 +1,27 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : 2022/08/12, 17:16:28
-    Author     : SPG-1105
-*/
-
+.h1MainSingleTitle {
+    order: 2;
+    width: 100%;
+    text-align: center;
+    font-weight: 800;
+    @include rsFontSize(20, 20 , 16 );
+    @include lineheight(16 , 24);
+    @include marginPercent(830 , 30 , auto , 0 , auto );
+    @include media($sp) {
+        @include marginPercent(375 , 20 , auto , 0 , auto );
+    }
+}
+.picMainSingleTitle {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include kadomaru(10px);
+    background: #FFF;
+    margin: auto;
+}
+.picMainSingleTitleImg {
+    display: block;
+    width: 60px;
+    height: 60px;
+}

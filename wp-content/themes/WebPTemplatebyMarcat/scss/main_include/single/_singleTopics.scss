@@ -1,10 +1,72 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : 2022/08/12, 14:19:20
-    Author     : SPG-1105
-*/
-
+.base1Column {
+    @include marginPercent(830 , 40 , auto , 0 , auto );
+    @include media($sp) {
+        @include marginPercent(375 , 40 , auto , 0 , auto );
+    }
+}
+.secMainTopicsSingle {
+    background: #FFF;
+    @include kadomaru(10px);
+    @include paddingPercent(630 , 20 , 20 , 20 , 20 );
+    @include media($sp) {
+        @include paddingPercent(375 , 20 , 10 , 20 , 10 );
+    }
+    h1,h2,h3,h4,h5,p,li,ul,time {
+        @include lineheight(14 , 25);
+    }
+    time {
+        @include rsFontSize(14 , 14 , 12 );
+    }
+    p {
+        @include rsFontSize(14 , 14 , 12 );
+    }
+    a {
+        color: #111;
+        text-decoration: underline;
+    }
+    h1 {
+        @include rsFontSize(20 , 20 , 20 );
+        border-bottom: 1px solid #93A5B1;        
+        @include paddingPercent(630 , 0 , 0 , 10 , 0 );
+        @include marginPercent(630 , 0 , 0 , 10 , 0 );
+    }
+    p+h1,h2+h1,h3+h1,h4+h1,h5+h1,h6+h1,span+h1,.hcb_wrap+h1{
+        @include marginPercent(630 , 60 , 0 , 10 , 0 );
+    }
+    h2 {
+        @include rsFontSize(18 , 18 , 18 );
+        @include marginPercent(630 , 0 , 0 , 10 , 0 );
+    }
+    p+h2,h2+h2,h3+h2,h4+h2,h5+h2,h6+h2,span+h2,.hcb_wrap+h2{
+        @include marginPercent(630 , 40 , 0 , 10 , 0 );
+    }
+    h3 {
+        @include rsFontSize(16 , 16 , 16 );
+        border-bottom: 1px solid #93A5B1;        
+        @include marginPercent(630 , 0 , 0 , 10 , 0 );
+    }
+    p+h3,h2+h3,h3+h3,h4+h3,h5+h3,h6+h3,span+h3,.hcb_wrap+h3{
+        @include marginPercent(630 , 20 , 0 , 10 , 0 );
+    }
+}
+.btmToArchiveWap {
+    @include rsFontSize(14 , 14 , 12 );
+    @include marginPercent(630 , 40 , auto , 40 , auto );
+    text-align: center;
+    @include media($sp) {
+        @include marginPercent(355 , 40 , auto , 40 , auto );
+    }
+}
+.btmToArchive {
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 5px 10px;
+    @include kadomaru(10px);
+    background: #3EA8FF;
+    color: #FFF;
+    transition-duration: 0.5s;
+    &:hover {
+        opacity: 0.5;
+    }
+}

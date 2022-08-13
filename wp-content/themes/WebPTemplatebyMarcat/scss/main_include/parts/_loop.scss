@@ -31,15 +31,17 @@
     @include ontener_width(385 , 275);
 }
 .linkPostKnowledgeLoop {
-    @include rsFontSize(14 , 14 , 14 );
-    @include lineheight(14,19);
     color: #111;
-    text-decoration: none;
+    text-decoration: none;    
+}
+.h2PostKnowledgeLoop {
+    @include rsFontSize(14 , 14 , 14 );
+    @include lineheight(14,19); 
     font-weight: 800;
 }
 .catsPostKnowledgeLoop {
     justify-content: flex-start;
-    @include marginPercent(385 , 15 , 0 , 0 , 0 );
+    @include marginPercent(385 , 10 , 0 , 0 , 0 );
 }
 .liPostKnowledgeLoop {
     display: inline-block;    
@@ -57,7 +59,7 @@
 
 .timeBookClipsPostKnowledgeLoop {
     @include rsFontSize(14 , 14 , 14 );
-    @include marginPercent(385 , 15 , 0 , 0 , 0 );
+    @include marginPercent(385 , 10 , 0 , 0 , 0 );
     justify-content: flex-start;
 }
 .timePostKnowledgeLoop {

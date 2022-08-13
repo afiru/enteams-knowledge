@@ -1,1 +1,11 @@
-@charset "utf-8";
+.footer {
+    margin: 110px 0 0 0;
+}
+.logoFooter {
+    padding: 40px 0;
+    border-bottom: 1px solid #93A5B1;
+}
+.address {
+    padding: 20px;
+    @include rsFontSize(10 , 10 , 10 );
+}
