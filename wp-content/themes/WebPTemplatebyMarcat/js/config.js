@@ -63,3 +63,40 @@ $(function () {
         $('.jsheaderSearch').css('height',nowHeight);
     }
 });
+
+//ページ内リンクのスムーズスクロール
+$(function(){
+    var headerHeight = 0;
+    if (window.innerWidth < 750) {
+        var headerHeight = $('.headerSpWap').outerHeight();
+    }
+    else {
+        var headerHeight = $('.headerPcWap').outerHeight();
+    }    
+    var urlHash = location.hash;
+    if(urlHash) {
+        $('body,html').stop().scrollTop(0);
+        setTimeout(function(){
+            var target = $(urlHash);
+            var position = target.offset().top - headerHeight;
+            $('body,html').stop().animate({scrollTop:position}, 500);
+        }, 100);
+    }
+    $('a[href^="#"]').click(function() {
+        var href= $(this).attr("href");
+        var target = $(href);
+        var position = target.offset().top - headerHeight;
+        $('body,html').stop().animate({scrollTop:position}, 500);   
+    });
+});
+
+//お気に入りを設定
+$(function(){
+    let bookingids = [];
+    bookingids = $.cookie("bookingids");
+    $('.jsiconCountBookingsLoop').on('click', function () {
+        //console.log($(this).data('postid'));
+        bookingids.push($(this).data('postid'));
+        console.log(bookingids);
+    });    
+});

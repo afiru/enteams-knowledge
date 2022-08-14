@@ -28,6 +28,16 @@
         border-bottom: none;
     }
 }
+.countBookmarks {
+    background: url(../img/book.svg) no-repeat left center;
+    background-size: auto 100%;
+    padding: 2px 0 2px 25px;
+    cursor: pointer;
+    @include media($sp) {
+        padding: 2px 0 2px 6.5vw;
+    }
+}
+
 .btmDateRightBar {
     color: #93A5B1;
     text-decoration: none;
@@ -64,9 +74,16 @@
         color: #93A5B1;
     }
 }
+#toc_container {
+    display: block;
+}
+#toc_container.no_bullets ul {
+    width: 100%;
+}
 #toc_container li {
     @include paddingPercent(160 , 0 , 0 , 0 , 12 );
     position: relative;
+    width: 100%;
     @include media($sp) {
         @include paddingPercent(375 , 0 , 0 , 0 , 17 );
     }
@@ -76,6 +93,10 @@
             @include marginPercent(375 , 15 , 0 , 0 , 0 );
         }
     }
+    a {
+        display: block;
+        width: 100%;
+    }
 }
 #toc_container li:before {
     content: '●';
@@ -84,7 +105,7 @@
     @include rsFontSize(8,8,8);
     position: absolute;
     left: 0;
-    top: 2px;
+    top: 3px;
 }
 #toc_container li a {
     @include lineheight(10,14);

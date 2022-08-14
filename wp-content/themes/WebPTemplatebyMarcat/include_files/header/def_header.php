@@ -20,6 +20,7 @@
     var rest_url = "<?php echo home_url('/wp-json/wp/v2/'); ?>";
 </script>
 <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js'></script>
 <script type="text/javascript" src='<?php echo get_bloginfo('template_url'); ?>/js/config.js'> </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

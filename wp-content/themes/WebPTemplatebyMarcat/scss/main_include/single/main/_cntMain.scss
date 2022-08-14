@@ -51,6 +51,15 @@
     p+h3,h2+h3,h3+h3,h4+h3,h5+h3,h6+h3,span+h3,.hcb_wrap+h3{
         @include marginPercent(630 , 20 , 0 , 10 , 0 );
     }
+    table {
+        table-layout: fixed;
+        width: 100%;
+        td,th {
+            @include rsFontSize(14 , 14 , 12 );
+            padding: 10px;
+            border: 1px solid #93A5B1;
+        }
+    }
 }
 .hcb_wrap.hcb_wrap span {
     @include rsFontSize(14 , 14 , 12 );
