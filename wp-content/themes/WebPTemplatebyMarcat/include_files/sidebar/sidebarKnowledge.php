@@ -11,7 +11,7 @@
                         <img src="<?php echo $icon[0]; ?>" alt="<?php echo $categorie->cat_name; ?>アイコン画像" width="<?php echo $icon[1]; ?>" height="<?php echo $icon[2]; ?>">
                     </figure>
                 <?php endif; ?>
-                <h2 class="h2titleSidebarKnowledge"><?php echo $categorie->cat_name; ?></h2>
+                <h2 class="h2titleSidebarKnowledge"><?php echo $categorie->cat_name; ?>（<?php echo $categorie->count; ?>）</h2>
             </a>
             <?php $subCats = get_categories("parent=$categorie->cat_ID&hide_empty=1&orderby=id&order=asc"); ?>
             <?php if(!empty($subCats)): ?>
@@ -25,7 +25,7 @@
                                         <img src="<?php echo $icon[0]; ?>" alt="<?php echo $subCat->cat_name; ?>アイコン画像" width="<?php echo $icon[1]; ?>" height="<?php echo $icon[2]; ?>">
                                     </figure>
                                 <?php endif; ?>
-                                <h2 class="h2sidebarSubCatstitle"><?php echo $subCat->cat_name; ?></h2>
+                                <h2 class="h2sidebarSubCatstitle"><?php echo $subCat->cat_name; ?>（<?php echo $subCat->count; ?>）</h2>
                             </a>
                         </li>
                         <?php $subSubCats = get_categories("parent=$subCat->cat_ID&hide_empty=1&orderby=id&order=asc"); ?>
@@ -40,7 +40,7 @@
                                                     <img src="<?php echo $icon[0]; ?>" alt="<?php echo $subSubCat->cat_name; ?>アイコン画像" width="<?php echo $icon[1]; ?>" height="<?php echo $icon[2]; ?>">
                                                 </figure>
                                             <?php endif; ?>
-                                            <h2 class="h2sidebarSubCatstitle"><?php echo $subSubCat->cat_name; ?></h2>
+                                            <h2 class="h2sidebarSubCatstitle"><?php echo $subSubCat->cat_name; ?>（<?php echo $subSubCat->count; ?>）</h2>
                                         </a>
                                     </li>
                                     <?php $subSubSubCats = get_categories("parent=$subSubCat->cat_ID&hide_empty=1");  ?>
@@ -55,7 +55,7 @@
                                                             <img src="<?php echo $icon[0]; ?>" alt="<?php echo $subSubSubCat->cat_name; ?>アイコン画像" width="<?php echo $icon[1]; ?>" height="<?php echo $icon[2]; ?>">
                                                         </figure>
                                                     <?php endif; ?>
-                                                    <h2 class="h2sidebarSubCatstitle"><?php echo $subSubSubCat->cat_name; ?></h2>
+                                                    <h2 class="h2sidebarSubCatstitle"><?php echo $subSubSubCat->cat_name; ?>（<?php echo $subSubSubCat->count; ?>）</h2>
                                                 </a>
                                             </li>
                                             <?php endforeach; ?>

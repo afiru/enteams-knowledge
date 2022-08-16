@@ -3,7 +3,7 @@
 <div class="pc_only headerPcWap">
     <div class="bg_fff headerPc">
         <div class="wapper display_flex_center headerPcFx">
-            <a class="logoHeaderPc" href="<?php echo home_url('/'); ?>">konwnotes</a>
+            <a class="logoHeaderPc" href="<?php echo home_url('/'); ?>">konwnotes-<?php echo outputAllArticle(); ?></a>
             <nav class="headerPcGnav">
                 <ul class="display_flex_center ulHeaderPcGnav">
                     <li class="liHeaderPcGnav">

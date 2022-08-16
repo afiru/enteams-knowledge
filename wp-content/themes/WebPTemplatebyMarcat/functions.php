@@ -303,3 +303,9 @@ function nowClipsIDSet() {
     $clips = implode(',', array_filter(explode(",", $clips)));
     return $clips;
 }
+
+function outputAllArticle(){
+    $count_posts = wp_count_posts();
+    $posts = $count_posts->publish;
+    return $posts;
+}

@@ -1,7 +1,7 @@
 <?php $s = filter_input(INPUT_GET, 's', FILTER_SANITIZE_STRING); ?>
 <?php $searchCatID = filter_input(INPUT_GET, 'searchCat', FILTER_VALIDATE_INT); ?>
 <?php $paged = get_query_var('paged', 1); ?>
-<?php $args="post_type=post&cat=$searchCatID&s=$s&posts_per_page=40&paged=$paged"; ?>
+<?php $args="post_type=post&cat=$searchCatID&s=$s&posts_per_page=40&order=ASC&orderby=menu_order&paged=$paged"; ?>
 <?php $query1 = new WP_Query( $args ); ?>
 <?php if ( $query1->have_posts() ): ?>
     <div class="display_flex_stretch display_row postKnowledgeLoopFx">

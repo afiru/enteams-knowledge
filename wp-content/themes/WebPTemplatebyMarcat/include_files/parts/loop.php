@@ -13,7 +13,7 @@
         <ul class="display_flex_stretch display_row catsPostKnowledgeLoop">
             <?php foreach($nowCats as $nowCat): ?>
             <li class="liPostKnowledgeLoop">
-                <a class="bg_D9D9D9 cl_323232 display_flex_center t_center btmPostKnowledgeLoop" href="<?php echo get_category_link($nowCat->cat_ID); ?>"><?php echo $nowCat->cat_name; ?></a>
+                <span class="bg_D9D9D9 cl_323232 display_flex_center t_center btmPostKnowledgeLoop" href="<?php echo get_category_link($nowCat->cat_ID); ?>"><?php echo $nowCat->cat_name; ?></span>
             </li>
             <?php endforeach; ?>
         </ul>

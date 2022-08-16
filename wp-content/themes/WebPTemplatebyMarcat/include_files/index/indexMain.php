@@ -1,4 +1,4 @@
-<?php $args="cat=1&posts_per_page=40"; ?>
+<?php $args="cat=1&posts_per_page=40&order=ASC&orderby=menu_order"; ?>
 <?php $query1 = new WP_Query( $args ); ?>
 <?php if ( $query1->have_posts() ): ?>
     <div class="display_flex_stretch display_row postKnowledgeLoopFx">

@@ -1,5 +1,5 @@
 <?php $paged = get_query_var('paged', 1); ?>
-<?php $args="cat=$cat&posts_per_page=40&paged=$paged"; ?>
+<?php $args="cat=$cat&posts_per_page=40&order=ASC&orderby=menu_order&paged=$paged"; ?>
 <?php $query1 = new WP_Query( $args ); ?>
 <?php if ( $query1->have_posts() ): ?>
     <div class="display_flex_stretch display_row postKnowledgeLoopFx">

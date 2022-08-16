@@ -25,13 +25,14 @@
 .cntMain {
     h1,h2,h3,h4,h5,p,li,ul {
         @include lineheight(14 , 25);
-        text-align: justify;
-        text-justify: inter-ideograph; 
+
     }
     p {
         @include rsFontSize(14 , 14 , 12 );
-        text-align: justify;
-        text-justify: inter-ideograph;
+        font-weight: 400;
+        &+p{
+            @include marginPercent(630 , 5 , 0 , 0 , 0 );
+        }
     }
     a {
         color: #111;
@@ -48,20 +49,39 @@
     }
     h2 {
         @include rsFontSize(18 , 18 , 18 );
-        @include marginPercent(630 , 0 , 0 , 10 , 0 );
+        @include marginPercent(630 , 40 , 0 , 10 , 0 );
     }
     p+h2,h2+h2,h3+h2,h4+h2,h5+h2,h6+h2,span+h2,.hcb_wrap+h2{
         @include marginPercent(630 , 40 , 0 , 10 , 0 );
     }
     h3 {
+        @include marginPercent(630 , 20 , 0 , 5 , 0 );
         @include rsFontSize(16 , 16 , 16 );
         border-bottom: 1px solid #93A5B1;        
-        @include marginPercent(630 , 0 , 0 , 10 , 0 );
+        @include paddingPercent(630 , 0 , 0 , 10 , 0 );
     }
     p+h3,h2+h3,h3+h3,h4+h3,h5+h3,h6+h3,span+h3,.hcb_wrap+h3{
+
+    }
+    h4 {
+        @include marginPercent(630 , 20 , 0 , 5 , 0 );
+        @include rsFontSize(16 , 16 , 16 ); 
+        @include paddingPercent(630 , 0 , 0 , 10 , 0 ); 
+    }
+    .tableWap {
+        width: 100%;
+        overflow: auto;
         @include marginPercent(630 , 20 , 0 , 10 , 0 );
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    ol,li,ul {
+        @include rsFontSize(14 , 14 , 12 );
+        @include marginPercent(630 , 5 , 0 , 0 , 0 );
     }
     table {
+
         table-layout: fixed;
         width: 100%;
         td,th {

@@ -1,7 +1,7 @@
 <?php $user = wp_get_current_user(); ?>
 <?php $avive = getNowActive(); ?>
 <div class="sp_only headerSpWap">
-    <a class="logoHeaderSp" href="<?php echo home_url('/'); ?>">konwnotes</a>
+    <a class="logoHeaderSp" href="<?php echo home_url('/'); ?>">konwnotes-<?php echo outputAllArticle(); ?></a>
     <div class="wapper headerSpTab">
         <ul class="display_flex_stretch ulheaderSpTab">
             <li class="liHeaderSpTab">

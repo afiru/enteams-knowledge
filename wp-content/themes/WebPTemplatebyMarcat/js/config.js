@@ -147,3 +147,9 @@ $(function () {
     });
     
 });
+
+
+$(function () {
+    //記事内のテーブルを囲う
+    $(".cntMain table").wrap('<div class= "tableWap"></div>');
+});
