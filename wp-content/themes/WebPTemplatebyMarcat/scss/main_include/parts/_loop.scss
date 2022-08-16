@@ -106,6 +106,8 @@
     background-size: auto 100%;
     padding: 2px 0 2px 25px;
     cursor: pointer;
+    color: #93A5B1;
+    @include rsFontSize(10 , 10 , 10 );
     @include media($max1000) {
         padding: 2px 0 2px 2.5vw;
     }

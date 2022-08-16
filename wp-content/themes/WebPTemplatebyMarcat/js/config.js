@@ -90,13 +90,27 @@ $(function(){
     });
 });
 
-//お気に入りを設定
+//クリップを実装
 $(function(){
-    let bookingids = [];
-    bookingids = $.cookie("bookingids");
+    $('.jsiconClipsLoop').on('click', function () {
+        let nowPostID = $(this).data('postid');
+        apiUrl = rest_url + 'knowledgeClipsApi/' + nowPostID;
+        console.log(apiUrl);
+        $.getJSON(apiUrl, function (item) {
+             $('.jsiconClipsLoop').text(item['now']);
+        });
+    });    
+});
+
+//お気に入りを実装
+$(function(){
     $('.jsiconCountBookingsLoop').on('click', function () {
-        //console.log($(this).data('postid'));
-        bookingids.push($(this).data('postid'));
-        console.log(bookingids);
+        let nowPostID = $(this).data('postid');
+        nowClass = '.jsiconCountBookingsLoop'+nowPostID;
+        apiUrl = rest_url + 'knowledgeBookmarksApi/' + nowPostID;
+        console.log(nowClass);
+        $.getJSON(apiUrl, function (item) {
+             $(nowClass).text(item['count']);
+        });
     });    
 });

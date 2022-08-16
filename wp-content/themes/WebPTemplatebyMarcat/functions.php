@@ -266,3 +266,15 @@ function login_redirect() {
     exit();
 }
 add_action('wp_login', 'login_redirect');
+
+function txtClips($id) {
+    $user = wp_get_current_user();
+    $clips=SCF::get_user_meta( $user->ID , 'userClipsPostIDs' );
+    $clips = array_filter(explode(",", $clips));    
+    if(in_array($id , $clips)) {
+        return 'クリップ済み';
+    }
+    else {
+        return 'クリップする';
+    }
+}

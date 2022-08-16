@@ -20,10 +20,10 @@
         <div class="display_flex_center timeBookClipsPostKnowledgeLoop">
             <time class="timePostKnowledgeLoop"><?php echo get_the_date('Y.m.d',$post->ID); ?></time>
             <div class="bookingPostKnowledgeLoop">
-                <span class="iconCountBookingsLoop jsiconCountBookingsLoop" data-postID="<?php echo $post->ID; ?>"><?php echo (int)SCF::get('countPosts'); ?></span>
+                <span class="iconCountBookingsLoop jsiconCountBookingsLoop jsiconCountBookingsLoop<?php echo $post->ID; ?>" data-postid="<?php echo $post->ID; ?>"><?php echo (int)SCF::get('countPosts'); ?></span>
             </div>
             <div class="clipsPostKnowledgeLoop">
-                <span class="iconClipsLoop jsiconClipsLoop" data-postID="<?php echo $post->ID; ?>">クリップする</span>
+                <span class="iconClipsLoop jsiconClipsLoop" data-postid="<?php echo $post->ID; ?>"><?php echo txtClips($post->ID); ?></span>
             </div>
         </div>
     </section>

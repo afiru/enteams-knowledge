@@ -59,9 +59,12 @@
         table-layout: fixed;
         width: 100%;
         td,th {
-            @include rsFontSize(14 , 14 , 12 );
+            @include rsFontSize(10 , 10 , 10 );
             padding: 10px;
             border: 1px solid #93A5B1;
+            p {
+                @include rsFontSize(10 , 10 , 10 );
+            }
         }
     }
 }

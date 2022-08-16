@@ -1,4 +1,5 @@
-<div class="rightBar">
+
+<div class="rightBar">    
     <div class="rightBarFx jsrightBarFx">
         <div class="bg_fff dateRightBar">
             <section class="display_flex_center secDateRightBar">
@@ -7,11 +8,10 @@
             </section>
             <section class="display_flex_center secDateRightBar">
                 <h3 class="cl_93A5B1 h3secDateRightBar">お気に入り</h3>
-                <span class="countBookmarks jsiconCountBookingsLoop" data-postID="<?php echo $post->ID; ?>"><?php echo (int)SCF::get('countPosts'); ?></span>
+                <span class="countBookmarks jsiconCountBookingsLoop jsiconCountBookingsLoop<?php echo $post->ID; ?>" data-postid="<?php echo $post->ID; ?>"><?php echo (int)SCF::get('countPosts'); ?></span>
             </section>
             <section class="display_flex_center secDateRightBar">
-                <h3 class="cl_93A5B1 h3secDateRightBar">クリップする</h3>
-                <span class="iconClipsLoop jsiconClipsLoop" data-postID="<?php echo $post->ID; ?>"><?php echo (int)SCF::get('countPosts'); ?></span>
+                <span class="iconClipsLoop jsiconClipsLoop" data-postid="<?php echo $post->ID; ?>"><?php echo txtClips($post->ID); ?></span>
             </section>
             <section class="display_flex_center secDateRightBar">
                 <a class="btmDateRightBar" href="<?php echo home_url('//wp-admin/post.php?post='); echo $post->ID; ?>&action=edit" target="_blank">この記事を編集する</a>
@@ -23,6 +23,7 @@
             <div id="tocContainerSet" class="tocContainerSet">
 
             </div>
-        </section>
+        </section>      
+        
     </div>
 </div>
