@@ -22,9 +22,18 @@
 }
 .h3shareClips {
     @include rsFontSize(14 , 14 , 12 );
+    @include media($sp) {
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+    }
 }
 .inputBox {
     @include ontener_width(720 , 560);
+    @include media($sp) {
+        @include marginPercent(375 , 10 , 0 , 0 , 0 );
+        width: 100%;
+    }
     input {
         @include kadomaru(10px);
         width: 100%;
@@ -54,7 +63,31 @@
     color: #111;
     text-decoration: none;
     transition-duration: 0.5s;
+    @include media($sp) {
+        
+    }
     &:hover {
         opacity: 0.6;
     }
+}
+.liClipsNav {
+    .maruicon {
+        @include media($sp) {
+            width: 10%;
+        }
+    }
+    a {
+        @include media($sp) {
+            width: 90%;
+        }
+    }
+    .iconClipsLoop {
+        margin: 0 0 0 20px;
+        @include media($sp) {
+            margin: 5px 0 0 auto;            
+        }
+    }
+}
+.liClipsNav .iconClipsLoop {
+    
 }
