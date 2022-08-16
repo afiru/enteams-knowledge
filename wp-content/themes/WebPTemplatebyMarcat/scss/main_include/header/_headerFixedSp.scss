@@ -4,6 +4,7 @@
     width: 100%;
     left: 0;
     background: #FFF;
+    z-index: 99999;
     @include paddingPercent(375 , 5 , 0 , 5 , 0 );
 }
 .headerSpGnav{
