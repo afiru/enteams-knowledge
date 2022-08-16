@@ -45,12 +45,9 @@ class knowledgeBookmarks {
     
     
     public function checkNowBookmarksUsers() {
-        $nowBookmarsUsers = explode(",", SCF::get('countPostUsers',$this->postID));
-        $this->nowBookmarsUsers =[];
-        foreach ($nowBookmarsUsers as $v) {
-            $this->nowBookmarsUsers[] = (int) $v;
-        }
-        if(in_array($this->nowUserID,$this->nowBookmarsUsers, true)){
+        $nowUserClips = SCF::get_user_meta( $this->nowUserID, 'userBookingPostIDs' );
+        $nowUserClips = explode(",", $nowUserClips);
+        if(in_array($this->postID,$nowUserClips)){
             return 'true';            
         }
         else {
