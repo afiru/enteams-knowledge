@@ -278,3 +278,10 @@ function txtClips($id) {
         return 'クリップする';
     }
 }
+//お気に入り数
+function nowBookmarksIDs() {
+    $user = wp_get_current_user();
+    $userBookingPostIDs = SCF::get_user_meta( $user->ID , 'userBookingPostIDs' );
+    $userBookingPostIDs = array_filter(explode(",", $userBookingPostIDs));
+    return $userBookingPostIDs;
+}
