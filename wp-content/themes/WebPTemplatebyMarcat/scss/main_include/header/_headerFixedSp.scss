@@ -13,9 +13,12 @@
     display: flex;
     justify-content: space-around;
     background: #FFF;
+    position: relative;
+    
 }
 .liHeaderSpGnav{
     position: relative;
+    z-index: 15;
     @include ontener_width(375 , 75);
 }
 .btmHeaderSpGnav {

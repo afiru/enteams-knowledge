@@ -1,5 +1,12 @@
 $(function () {
+    //目次を移動
     $('#toc_container').insertAfter('#tocContainerSet');
+    //クリップの要素を移動させる
+    let clipsToc_containers = '';
+    let clipsContainerSet = '';
+    $(".pageClips").each(function(i, elem) {
+        $($(this).find('#toc_container')).insertAfter($(this).find('#tocContainerSet'));
+    });
     //PCヘッダー設定
     $('.jsbtmHeaderPcGnavTopics').on('click', function () {
         $('.jstopicsHeaderPc').fadeIn(500);

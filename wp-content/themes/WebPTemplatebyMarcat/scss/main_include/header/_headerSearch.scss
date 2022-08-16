@@ -92,12 +92,12 @@
         @include marginPercent(375 , 10 , 0 , 0 , 0 );
     }
     &:nth-child(n+2) {
-        @include marginPercent(1160 , 20 , 0 , 0 , 20 );
+        @include marginPercent(1160 , 20 , 0 , 0 , 14 );
         @include media($sp) {
             @include marginPercent(375 , 10 , 0 , 0 , 0 );
         }
     }
-    &:nth-child(5n) {
+    &:nth-child(6n+1) {
         @include marginPercent(1160 , 20 , 0 , 0 , 0 );
         @include media($sp) {
             @include marginPercent(375 , 10 , 0 , 0 , 0 );

@@ -70,8 +70,14 @@ svg {
     top: 0;
     left: 0;
     display: none;
-    z-index: 1;
+    z-index: 10;
     background: rgba(255 , 255 , 255 , 0.2);
+}
+#page_wapper_master {
+    @include media($sp){
+        position: relative;
+        z-index: 2;
+    }
 }
 //トップページ部分
 @import 'main_include/header/_header_pc';
@@ -102,6 +108,7 @@ svg {
 @import 'main_include/single/_singleSeminar';
 @import 'main_include/single/_singleTopics';
 
+@import 'main_include/page/_clips';
 //フッター部分
 @import 'main_include/footer/_footer';
 @import 'lightbox.min';

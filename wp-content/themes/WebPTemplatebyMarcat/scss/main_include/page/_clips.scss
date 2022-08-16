@@ -1,0 +1,60 @@
+.clipsNav{
+    background: #FFF;
+    @include paddingPercent(830 , 20 , 20 , 20 , 20 );
+    @include marginPercent(830 , 0 , 0 , 40 , 0 );
+    @include kadomaru(10px);
+    @include media($sp) {
+        width: 100%;
+        @include marginPercent(375 , 20 , 0 , 40 , 0 );
+        @include paddingPercent(375 , 20 , 10 , 20 , 10 );
+    }
+}
+.h2KnowledgeMain {
+    font-weight: 800;
+    text-align: center;
+    @include rsFontSize(18 , 18 , 16);
+}
+.shareClips {
+    @include marginPercent(830 , 20 , 0 , 0 , 0 );
+    @include media($sp) {
+        @include marginPercent(375 , 20 , 0 , 0 , 0 );
+    }
+}
+.h3shareClips {
+    @include rsFontSize(14 , 14 , 12 );
+}
+.inputBox {
+    @include ontener_width(720 , 560);
+    input {
+        @include kadomaru(10px);
+        width: 100%;
+        padding: 10px 10px;
+        border: 1px solid #93A5B1;
+        color: #93A5B1;
+        font-weight: 400;
+        @include rsFontSize(12 , 12 , 10 );
+    }
+}
+.ulClipsNav {
+    @include rsFontSize(14 , 14 , 12 );
+    @include marginPercent(830 , 20 , 0 , 0 , 0 );
+    @include media($sp) {
+        @include marginPercent(375 , 20 , 0 , 0 , 0 );
+    }
+}
+.liClipsNav {
+    justify-content: flex-start;
+    @include rsFontSize(14 , 14 , 12 );
+    @include marginPercent(830 , 10 , 0 , 0 , 0 );
+    @include media($sp) {
+        @include marginPercent(375 , 10 , 0 , 0 , 0 );
+    }
+}
+.liClipsNav a {
+    color: #111;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    &:hover {
+        opacity: 0.6;
+    }
+}

@@ -285,3 +285,21 @@ function nowBookmarksIDs() {
     $userBookingPostIDs = array_filter(explode(",", $userBookingPostIDs));
     return $userBookingPostIDs;
 }
+//クリップの記事を取得
+function nowClipsIDs() {
+    $user = wp_get_current_user();
+    $clips=SCF::get_user_meta( $user->ID , 'userClipsPostIDs' );
+    $clips = array_filter(explode(",", $clips));
+    
+    $getClips = filter_input(INPUT_GET, 'postid', FILTER_SANITIZE_SPECIAL_CHARS);
+    $getClips = array_filter(explode(",", $getClips));
+    
+    return empty($getClips) ? $clips : $getClips;
+    
+}
+function nowClipsIDSet() {
+    $user = wp_get_current_user();
+    $clips=SCF::get_user_meta( $user->ID , 'userClipsPostIDs' );
+    $clips = implode(',', array_filter(explode(",", $clips)));
+    return $clips;
+}

@@ -4,6 +4,12 @@
         @include marginPercent(375 , 40 , 0 , 0 , 0 );
     }
 }
+.pageClips1  {
+    @include marginPercent(830 , 80 , 0 , 0 , 0 );
+    @include media($sp) {
+        @include marginPercent(375 , 80 , 0 , 0 , 0 );
+    }
+}
 .cntMain {
     @include ontener_width(830 , 630);
     @include paddingPercent(830 , 20 , 20 , 20 , 20 );
