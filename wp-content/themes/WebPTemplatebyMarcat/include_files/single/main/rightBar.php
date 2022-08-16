@@ -11,10 +11,10 @@
                 <span class="countBookmarks jsiconCountBookingsLoop jsiconCountBookingsLoop<?php echo $post->ID; ?>" data-postid="<?php echo $post->ID; ?>"><?php echo (int)SCF::get('countPosts'); ?></span>
             </section>
             <section class="display_flex_center secDateRightBar">
-                <span class="iconClipsLoop jsiconClipsLoop" data-postid="<?php echo $post->ID; ?>"><?php echo txtClips($post->ID); ?></span>
+                <span class="iconClipsLoop jsiconClipsLoop jsiconClipsLoop<?php echo $post->ID; ?>" data-postid="<?php echo $post->ID; ?>"><?php echo txtClips($post->ID); ?></span>
             </section>
             <section class="display_flex_center secDateRightBar">
-                <a class="btmDateRightBar" href="<?php echo home_url('//wp-admin/post.php?post='); echo $post->ID; ?>&action=edit" target="_blank">この記事を編集する</a>
+                <a class="btmDateRightBar" href="<?php echo home_url('/wp-admin/post.php?post='); echo $post->ID; ?>&action=edit" target="_blank">この記事を編集する</a>
             </section>
         </div>
 

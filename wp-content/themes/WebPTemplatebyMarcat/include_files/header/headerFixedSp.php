@@ -46,7 +46,7 @@
                         <img loading="lazy" loading="lazy" src="<?php echo get_bloginfo('template_url'); ?>/img/nothings.svg" alt="<?php echo $user->display_name; ?>画像" width="30" height="30" />
                     <?php else: ?>
                         <img loading="lazy" loading="lazy" src="<?php echo $img[0]; ?>" alt="<?php echo $user->display_name; ?>画像" width="30" height="30" />
-<?php endif; ?>
+                    <?php endif; ?>
                 </div>
                 <nav class="userMenuHeaderSp jsuserMenuHeaderSp">
                     <h3 class="h3UserMenuHeaderSp"><?php echo $user->display_name; ?></h3>

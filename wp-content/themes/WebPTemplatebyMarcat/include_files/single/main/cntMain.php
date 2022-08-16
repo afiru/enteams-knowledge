@@ -7,7 +7,7 @@
             <span class="iconCountBookingsLoop jsiconCountBookingsLoop jsiconCountBookingsLoop<?php echo $post->ID; ?>" data-postid="<?php echo $post->ID; ?>"><?php echo (int)SCF::get('countPosts'); ?></span>
         </div>
         <div class="clipsPostKnowledgeLoop btmBookingClipsClips">
-            <span class="iconClipsLoop jsiconClipsLoop" data-postid="<?php echo $post->ID; ?>"><?php echo txtClips($post->ID); ?></span>
+            <span class="iconClipsLoop jsiconClipsLoop jsiconClipsLoop<?php echo $post->ID; ?>" data-postid="<?php echo $post->ID; ?>"><?php echo txtClips($post->ID); ?></span>
         </div>
     </div>
 </div>

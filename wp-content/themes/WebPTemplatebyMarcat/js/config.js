@@ -4,7 +4,7 @@ $(function () {
     //クリップの要素を移動させる
     let clipsToc_containers = '';
     let clipsContainerSet = '';
-    $(".pageClips").each(function(i, elem) {
+    $(".pageClips").each(function (i, elem) {
         $($(this).find('#toc_container')).insertAfter($(this).find('#tocContainerSet'));
     });
     //PCヘッダー設定
@@ -37,11 +37,11 @@ $(function () {
     $('.jsbtmClosedSearch').on('click', function () {
         $('.jsheaderSearch').fadeOut(500);
     });
-    
+
     //記事追従部分
     if (window.innerWidth > 750) {
         let headerHeight = $('.header').outerHeight(true);
-        $('.jsrightBarFx').css('top',headerHeight);
+        $('.jsrightBarFx').css('top', headerHeight);
     }
 
 
@@ -62,62 +62,61 @@ $(function () {
         $('.jsbtmHeaderSpGnavSearch').on('click', function () {
             $('.jsheaderSearch').fadeIn(500);
         });
-        
+
         let windowHeight = $(window).height();
         let headerHeight = $('.header').outerHeight(true);
         let fixedNavHeight = $('.headerSpFixed').outerHeight(true);
-        nowHeight = windowHeight-headerHeight-fixedNavHeight;
-        $('.jsheaderSearch').css('height',nowHeight);
+        nowHeight = windowHeight - headerHeight - fixedNavHeight;
+        $('.jsheaderSearch').css('height', nowHeight);
     }
 });
 
 //ページ内リンクのスムーズスクロール
-$(function(){
+$(function () {
     var headerHeight = 0;
     if (window.innerWidth < 750) {
         var headerHeight = $('.headerSpWap').outerHeight();
-    }
-    else {
+    } else {
         var headerHeight = $('.headerPcWap').outerHeight();
-    }    
+    }
     var urlHash = location.hash;
-    if(urlHash) {
+    if (urlHash) {
         $('body,html').stop().scrollTop(0);
-        setTimeout(function(){
+        setTimeout(function () {
             var target = $(urlHash);
             var position = target.offset().top - headerHeight;
-            $('body,html').stop().animate({scrollTop:position}, 500);
+            $('body,html').stop().animate({scrollTop: position}, 500);
         }, 100);
     }
-    $('a[href^="#"]').click(function() {
-        var href= $(this).attr("href");
+    $('a[href^="#"]').click(function () {
+        var href = $(this).attr("href");
         var target = $(href);
         var position = target.offset().top - headerHeight;
-        $('body,html').stop().animate({scrollTop:position}, 500);   
+        $('body,html').stop().animate({scrollTop: position}, 500);
     });
 });
 
 //クリップを実装
-$(function(){
+$(function () {
     $('.jsiconClipsLoop').on('click', function () {
         let nowPostID = $(this).data('postid');
         apiUrl = rest_url + 'knowledgeClipsApi/' + nowPostID;
-        console.log(apiUrl);
+        nowclass = '.jsiconClipsLoop' + nowPostID;
         $.getJSON(apiUrl, function (item) {
-             $('.jsiconClipsLoop').text(item['now']);
+            $(nowclass).text(item['now']);
         });
-    });    
+    });
 });
 
 //お気に入りを実装
-$(function(){
+$(function () {
     $('.jsiconCountBookingsLoop').on('click', function () {
         let nowPostID = $(this).data('postid');
-        nowClass = '.jsiconCountBookingsLoop'+nowPostID;
+        nowClass = '.jsiconCountBookingsLoop' + nowPostID;
         apiUrl = rest_url + 'knowledgeBookmarksApi/' + nowPostID;
         console.log(nowClass);
         $.getJSON(apiUrl, function (item) {
-             $(nowClass).text(item['count']);
+            $(nowClass).text(item['count']);
         });
-    });    
+    });
 });
