@@ -62,6 +62,12 @@
                                 <li class="liUserItemHeaderPc">
                                     <a class="btmUserItemHeaderPc itemUserItemHeaderPc03" href="<?php echo home_url('/wp-admin/edit-tags.php?taxonomy=category'); ?>">カテゴリーの管理</a>
                                 </li>
+                                <li class="liUserItemHeaderPc">
+                                    <a class="btmUserItemHeaderPc itemUserItemHeaderPc03" href="<?php echo home_url('/wp-admin/profile.php'); ?>">ユーザー情報変更</a>
+                                </li>
+                                <li class="liUserItemHeaderPc">
+                                    <a class="btmUserItemHeaderPc itemUserItemHeaderPc03" href="<?php echo home_url('/wp-admin/'); ?>">管理画面</a>
+                                </li>
                             </ul>
                             <a class="btmLogoutItemHeaderPc itemLogoutItemHeaderPc" href="<?php echo home_url('/wp-login.php?action=logout'); ?>"><spna class="iconLogout">ログアウト</spna></a>
                         </nav>
