@@ -19,9 +19,13 @@
 .cntMain {
     h1,h2,h3,h4,h5,p,li,ul {
         @include lineheight(14 , 25);
+        text-align: justify;
+        text-justify: inter-ideograph; 
     }
     p {
         @include rsFontSize(14 , 14 , 12 );
+        text-align: justify;
+        text-justify: inter-ideograph;
     }
     a {
         color: #111;

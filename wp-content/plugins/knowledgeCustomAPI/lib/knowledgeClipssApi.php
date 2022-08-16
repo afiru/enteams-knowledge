@@ -55,7 +55,7 @@ class knowledgeClipssApi {
     }
     
     public function changeKnowledgeClips() {
-        $rest['now'] = 'クリップ追加';
+        $rest['now'] = 'クリップ済み';
         $rest['nowUserID'] = $this->nowUserID;
         
         //ユーザーテーブルへクリップを追加
@@ -71,7 +71,7 @@ class knowledgeClipssApi {
     }
     
     public function decrementKnowledgeClips(){
-        $rest['now'] = 'クリップ削除';
+        $rest['now'] = 'クリップする';
         $rest['nowUserID'] = $this->nowUserID;
         $nowClipsCount = SCF::get('countPosts',$this->postID);
 
