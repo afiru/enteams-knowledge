@@ -120,3 +120,31 @@ $(function () {
         });
     });
 });
+
+$(function () {
+    //目次を移動
+    $('#toc_container').insertAfter('#tocContainerSet');
+    //クリップの要素を移動させる
+    let clipsToc_containers = '';
+    let clipsContainerSet = '';
+    var headerHeight = 0;
+    if (window.innerWidth < 750) {
+        var headerHeight = $('.headerSpWap').outerHeight();
+    } else {
+        var headerHeight = $('.headerPcWap').outerHeight();
+    }
+    
+    $(".pageClips").each(function (i, elem) {
+        var nowThis = $(this);
+        $($(this).find('#toc_container')).insertAfter($(this).find('#tocContainerSet'));      
+        
+        $(this).find('a[href^="#"]').click(function () {
+            var href = $(this).attr("href");
+            var target = nowThis.find(href);
+            console.log(nowThis.attr('class'));
+            var position = target.offset().top - headerHeight;
+            $('body,html').stop().animate({scrollTop: position}, 500);
+        });
+    });
+    
+});
