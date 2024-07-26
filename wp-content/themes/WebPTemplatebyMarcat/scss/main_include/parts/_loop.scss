@@ -26,6 +26,10 @@
 }
 .btmPostKnowledgeThumbsWap {
     @include ontener_width(90 , 60);
+    margin: auto;
+    img {
+        width: 100%;
+    }
 }
 .secPostKnowledgeLoop {
     @include ontener_width(385 , 275);
@@ -61,6 +65,9 @@
     @include rsFontSize(14 , 14 , 14 );
     @include marginPercent(385 , 10 , 0 , 0 , 0 );
     justify-content: flex-start;
+    @include media($sp) {
+        margin: 4.59% 0% 0% 0%;
+    }
 }
 .timePostKnowledgeLoop {
     @include rsFontSize(10 , 10 , 10 );

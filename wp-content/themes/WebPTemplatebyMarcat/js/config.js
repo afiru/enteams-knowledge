@@ -40,7 +40,7 @@ $(function () {
 
     //記事追従部分
     if (window.innerWidth > 750) {
-        let headerHeight = $('.header').outerHeight(true);
+        let headerHeight = $('.header').outerHeight(true)+30;
         $('.jsrightBarFx').css('top', headerHeight);
     }
 

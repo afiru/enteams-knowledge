@@ -11,7 +11,8 @@
     }
 }
 .cntMain {
-    @include ontener_width(830 , 630);
+    overflow: scroll;
+    @include ontener_width(920 , 720);
     @include paddingPercent(830 , 20 , 20 , 20 , 20 );
     @include kadomaru(10px);
     order: 1;
@@ -21,28 +22,35 @@
         @include marginPercent(375 , 20 , 0 , 0 , 0 );
         @include paddingPercent(375 , 20 , 10 , 20 , 10 );
     }
+    &::-webkit-scrollbar{
+        display: none;
+    }
 }
 .cntMain {
     h1,h2,h3,h4,h5,p,li,ul {
         @include lineheight(14 , 25);
-
+        word-wrap: break-word;
     }
     p {
         @include rsFontSize(14 , 14 , 12 );
+        word-wrap: break-word;
         font-weight: 400;
         &+p{
-            @include marginPercent(630 , 5 , 0 , 0 , 0 );
+            @include marginPercent(630 , 25 , 0 , 0 , 0 );
         }
     }
+    p+p {
+        
+    }
     a {
-        color: #111;
+        color: #3EA8FF;
         text-decoration: underline;
     }
     h1 {
         @include rsFontSize(20 , 20 , 20 );
         border-bottom: 1px solid #93A5B1;        
         @include paddingPercent(630 , 0 , 0 , 10 , 0 );
-        @include marginPercent(630 , 0 , 0 , 10 , 0 );
+        @include marginPercent(630 , 40 , 0 , 10 , 0 );
     }
     p+h1,h2+h1,h3+h1,h4+h1,h5+h1,h6+h1,span+h1,.hcb_wrap+h1{
         @include marginPercent(630 , 60 , 0 , 10 , 0 );
@@ -79,27 +87,80 @@
     ol,li,ul {
         @include rsFontSize(14 , 14 , 12 );
         @include marginPercent(630 , 5 , 0 , 0 , 0 );
+        word-wrap: break-word;
     }
     table {
-
+        height: auto !important;
         table-layout: fixed;
         width: 100%;
+        tr {
+            height: auto !important;
+            word-wrap: break-word;
+        }
+        th {
+            line-height: 1;
+            word-wrap: break-word;
+        }
         td,th {
-            @include rsFontSize(10 , 10 , 10 );
+            word-wrap: break-word;
+            word-break: break-all;
+            @include rsFontSize(11 , 11 , 12 );
             padding: 10px;
             border: 1px solid #93A5B1;
+            line-height: 2.5;
+            height: auto !important;
             p {
-                @include rsFontSize(10 , 10 , 10 );
+                @include rsFontSize(12 , 12 , 12 );
             }
+        }
+        td {
+            padding: 5px;
+        }
+    }
+    img {
+        @include marginPercent(630 , 20 , 0 , 20 , 0 );
+        max-width: 100%;
+        height: auto;
+    }
+    img {
+        @include marginPercent(630 , 20 , 0 , 20 , 0 );
+        max-width: 100%;
+        height: auto;
+    }
+    p {
+        position: relative;
+    }
+    iframe {
+        @include marginPercent(630 , 20 , 0 , 20 , 0 );
+        max-width: 100%;
+        min-height: 300px;
+    }
+}
+.cntMain {
+    .code-block {
+        @include marginPercent(630 , 20 , 0 , 20 , 0 );
+        width: 100%;
+
+    }
+    .CodeMirror {
+        overflow: auto;
+        @include paddingPercent(630 , 20 , 20 , 20 , 20 );
+        @include kadomaru(10px);
+        @include rsFontSize(14 , 14 , 12 );
+        line-height: 1.78571428571;
+        background: #000 !important;
+        color: #FFF;
+        margin: 0;
+        &::-webkit-scrollbar{
+            display: none;        
         }
     }
 }
 .hcb_wrap.hcb_wrap span {
-    @include rsFontSize(14 , 14 , 12 );
-    line-height: 1.78571428571;
+
 }
 .hcb_wrap pre.line-numbers {
-    @include paddingPercent(630 , 20 , 20 , 20 , 20 );
+
 }
 .hcb_wrap .line-numbers .line-numbers-rows {
     display: none;
@@ -110,9 +171,7 @@
 .hcb_wrap pre.line-numbers {
     @include paddingPercent(630 , 20 , 20 , 20 , 20 );
     @include kadomaru(10px);
-    &::-webkit-scrollbar{
-        display: none;        
-    }
+
 }
 .hcb_wrap.hcb_wrap code, .hcb_wrap.hcb_wrap pre {
     background: #1A2638;

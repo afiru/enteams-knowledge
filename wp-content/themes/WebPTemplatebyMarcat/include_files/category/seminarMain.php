@@ -4,7 +4,7 @@
 <?php if ( $query1->have_posts() ): ?>
     <div class="display_flex_stretch display_row postKnowledgeLoopFx">
         <?php while ( $query1->have_posts() ): $query1->the_post(); ?>
-            <?php get_template_part('include_files/parts/loop'); ?>
+            <?php get_template_part('include_files/parts/seminarLoop'); ?>
         <?php endwhile; // end of the loop. ?>
     </div>
     <div class="pageNavi">

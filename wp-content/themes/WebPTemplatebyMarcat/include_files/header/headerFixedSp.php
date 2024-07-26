@@ -51,6 +51,7 @@
                 <nav class="userMenuHeaderSp jsuserMenuHeaderSp">
                     <h3 class="h3UserMenuHeaderSp"><?php echo $user->display_name; ?></h3>
                     <ul class="userItemHeaderSp">
+                        <?php if (false === strpos($user->display_name, 'パートナー')): ?>
                         <li class="liUserItemHeaderSp">
                             <a class="btmUserItemHeaderSp itemUserItemHeaderSp01" href="<?php echo home_url('/wp-admin/edit.php'); ?>">記事の管理</a>
                         </li>
@@ -60,12 +61,15 @@
                         <li class="liUserItemHeaderSp">
                             <a class="btmUserItemHeaderSp itemUserItemHeaderSp03" href="<?php echo home_url('/wp-admin/edit-tags.php?taxonomy=category'); ?>">カテゴリーの管理</a>
                         </li>
+                        <?php endif; ?>
                         <li class="liUserItemHeaderSp">
                             <a class="btmUserItemHeaderSp itemUserItemHeaderSp03" href="<?php echo home_url('/wp-admin/profile.php'); ?>">ユーザー情報変更</a>
                         </li>
+                        <?php if (false === strpos($user->display_name, 'パートナー')): ?>
                         <li class="liUserItemHeaderSp">
                             <a class="btmUserItemHeaderSp itemUserItemHeaderSp03" href="<?php echo home_url('/wp-admin/'); ?>">管理画面</a>
                         </li>
+                        <?php endif; ?>
                     </ul>
                     <a class="btmLogoutItemHeaderSp itemLogoutItemHeaderSp" href="<?php echo home_url('/wp-login.php?action=logout'); ?>"><spna class="iconLogout">ログアウト</spna></a>
                 </nav>

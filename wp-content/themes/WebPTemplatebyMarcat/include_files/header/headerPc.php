@@ -3,7 +3,7 @@
 <div class="pc_only headerPcWap">
     <div class="bg_fff headerPc">
         <div class="wapper display_flex_center headerPcFx">
-            <a class="logoHeaderPc" href="<?php echo home_url('/'); ?>">konwnotes-<?php echo outputAllArticle(); ?></a>
+            <a class="logoHeaderPc" href="<?php echo home_url('/'); ?>">konwnotes</a>
             <nav class="headerPcGnav">
                 <ul class="display_flex_center ulHeaderPcGnav">
                     <li class="liHeaderPcGnav">
@@ -53,6 +53,7 @@
                         <nav class="userMenuHeaderPc jsuserMenuHeaderPc">
                             <h3 class="h3UserMenuHeaderPc"><?php echo $user->display_name;?></h3>
                             <ul class="userItemHeaderPc">
+                                <?php if (false === strpos($user->display_name, 'パートナー')): ?>
                                 <li class="liUserItemHeaderPc">
                                     <a class="btmUserItemHeaderPc itemUserItemHeaderPc01" href="<?php echo home_url('/wp-admin/edit.php'); ?>">記事の管理</a>
                                 </li>
@@ -62,12 +63,15 @@
                                 <li class="liUserItemHeaderPc">
                                     <a class="btmUserItemHeaderPc itemUserItemHeaderPc03" href="<?php echo home_url('/wp-admin/edit-tags.php?taxonomy=category'); ?>">カテゴリーの管理</a>
                                 </li>
+                                <?php endif; ?>
                                 <li class="liUserItemHeaderPc">
                                     <a class="btmUserItemHeaderPc itemUserItemHeaderPc03" href="<?php echo home_url('/wp-admin/profile.php'); ?>">ユーザー情報変更</a>
                                 </li>
+                                <?php if (false === strpos($user->display_name, 'パートナー')): ?>
                                 <li class="liUserItemHeaderPc">
                                     <a class="btmUserItemHeaderPc itemUserItemHeaderPc03" href="<?php echo home_url('/wp-admin/'); ?>">管理画面</a>
                                 </li>
+                                <?php endif; ?>
                             </ul>
                             <a class="btmLogoutItemHeaderPc itemLogoutItemHeaderPc" href="<?php echo home_url('/wp-login.php?action=logout'); ?>"><spna class="iconLogout">ログアウト</spna></a>
                         </nav>
@@ -81,12 +85,20 @@
                 <li class="liHeaderPcTab">
                     <a class="btmHeaderPcTab <?php echo $avive['knowledge']; ?>" href="<?php echo get_category_link(1); ?>">KNOWLEDGE</a>
                 </li>
+                <?php if (false === strpos($user->display_name, 'パートナー')): ?>
                 <li class="liHeaderPcTab">
                     <a class="btmHeaderPcTab <?php echo $avive['seminar']; ?>" href="<?php echo get_category_link(2); ?>">SEMINAR</a>
                 </li>
+            <?php endif; ?>
+            <?php if (false === strpos($user->display_name, 'パートナー')): ?>
+                <li class="liHeaderPcTab">
+                    <a class="btmHeaderPcTab <?php echo $avive['diary']; ?>" href="<?php echo get_category_link(64); ?>">DIARY</a>
+                </li>
+                <?php endif; ?>
                 <li class="liHeaderPcTab">
                     <a class="btmHeaderPcTab <?php echo $avive['topics']; ?>" href="<?php echo get_category_link(51); ?>">TOPIX</a>
                 </li>
+
             </ul>
         </div>
     </div>

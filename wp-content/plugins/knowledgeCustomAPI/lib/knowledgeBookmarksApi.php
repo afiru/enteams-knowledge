@@ -1,11 +1,10 @@
 <?php
 class knowledgeBookmarks {
     private $postID;
-    private $nowBookmarkUsers;
     private $nowUserID;
     private $nowBookmarsUsers;
-    
-    
+
+
     public function __construct() {
         add_action('rest_api_init', array($this, 'knowledgeBookmarksApi'));
     }
@@ -29,8 +28,8 @@ class knowledgeBookmarks {
     }
 
     public function knowledgeBookmarksApiConf($date) {
-        $this->postID = (int)$date['id'];       
-        $nowCheck = $this->checkNowBookmarksUsers();  
+        $this->postID = (int)$date['id'];
+        $nowCheck = $this->checkNowBookmarksUsers();
         if(empty($this->nowUserID)){
             $rest = $this->noneKnowledgeBookmarks();
         }
@@ -42,27 +41,28 @@ class knowledgeBookmarks {
         }
         return $rest;
     }
-    
-    
+
+
     public function checkNowBookmarksUsers() {
         $nowUserClips = SCF::get_user_meta( $this->nowUserID, 'userBookingPostIDs' );
         $nowUserClips = explode(",", $nowUserClips);
         if(in_array($this->postID,$nowUserClips)){
-            return 'true';            
+            return 'true';
         }
         else {
             return 'false';
         }
     }
-    
-    
+
+
     public function noneKnowledgeBookmarks() {
         $rest['nowUserID'] = $this->nowUserID;
         $rest['count'] = SCF::get('countPosts',$this->postID);
+        $this->nowBookmarsUsers = SCF::get('countPostUsers',$this->postID);
         $rest['userIDs'] = $this->nowBookmarsUsers;
         return $rest;
     }
-    
+
     public function changeKnowledgeBookmarks() {
         $rest['now'] = 'お気に入り追加';
         $rest['nowUserID'] = $this->nowUserID;
@@ -76,15 +76,10 @@ class knowledgeBookmarks {
         $rest['count'] = SCF::get('countPosts',$this->postID);
         $rest['count'] = $rest['count']+1;
         //お気に入り数を+1
-        update_post_meta($this->postID, 'countPosts', $rest['count']);        
-        
-        //ユーザーを追加
-        array_push($this->nowBookmarsUsers,$this->nowUserID);
-        $countPostUsers = implode(',', $this->nowBookmarsUsers);
-        array_unique($countPostUsers);
-        update_post_meta($this->postID, 'countPostUsers', $countPostUsers);
-        $rest['userIDs'] = $this->nowBookmarsUsers;
-        
+        update_post_meta($this->postID, 'countPosts', $rest['count']);
+
+
+
         //ユーザーテーブルへお気に入りを追加
         $nowUserBookmarks = SCF::get_user_meta( $this->nowUserID, 'userBookingPostIDs' );
         $nowUserBookmarks = explode(",", $nowUserBookmarks);
@@ -93,10 +88,10 @@ class knowledgeBookmarks {
         $nowUserBookmarks = implode(',', $nowUserBookmarks);
         $rest['userBookings'] = $nowUserBookmarks;
         update_user_meta(  $this->nowUserID , 'userBookingPostIDs', $nowUserBookmarks );
-        
+
         return $rest;
     }
-    
+
     public function decrementKnowledgeBookmarks(){
         $rest['now'] = 'お気に入り削除';
         $rest['nowUserID'] = $this->nowUserID;
@@ -111,12 +106,12 @@ class knowledgeBookmarks {
         $rest['count'] = $rest['count']-1;
         //お気に入り数を-1
         update_post_meta($this->postID, 'countPosts', $rest['count']);
-        
+
         //ポストに登録されているユーザーを削除
         $index = array_search($this->nowUserID,  $this->nowBookmarsUsers);
         array_splice($this->nowBookmarsUsers, $index);
-        update_post_meta($this->postID, 'countPostUsers', $countPostUsers);        
-        
+        update_post_meta($this->postID, 'countPostUsers', $countPostUsers);
+
         //ユーザーテーブルへお気に入りを追加
         $nowUserBookmarks = SCF::get_user_meta( $this->nowUserID, 'userBookingPostIDs' );
         $nowUserBookmarks = explode(",", $nowUserBookmarks);
@@ -126,10 +121,10 @@ class knowledgeBookmarks {
         array_splice($nowUserBookmarks, $index);
         $nowUserBookmarks = array_unique($nowUserBookmarks);
         $nowUserBookmarks = implode(',', $nowUserBookmarks);
-        
+
         $rest['userBookings'] = $nowUserBookmarks;
         update_user_meta(  $this->nowUserID , 'userBookingPostIDs', $nowUserBookmarks );
-        
+
         return $rest;
     }
 }

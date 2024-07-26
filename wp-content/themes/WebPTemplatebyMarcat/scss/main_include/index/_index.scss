@@ -5,7 +5,7 @@
     }
 }
 .sidebarKnowledge {
-    @include ontener_width(1200 , 320);
+    @include ontener_width(1200 , 230);
     @include kadomaru(10px);
     @include paddingPercent(1200 , 10 , 10 , 70 , 10 );
     @include media($sp) {
@@ -15,7 +15,7 @@
     }
 }
 .main2Column {
-    @include ontener_width(1200 , 830);
+    @include ontener_width(1200 , 920);
     @include media($sp) {
         order: 1;
         @include ontener_width(375 , 355);

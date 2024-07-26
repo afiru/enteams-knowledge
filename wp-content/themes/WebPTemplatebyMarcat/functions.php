@@ -23,14 +23,14 @@ function dequeue_css_header() {
     wp_dequeue_style('wp-block-library');
     wp_dequeue_style('dashicons');
     wp_dequeue_style('addtoany');
+    wp_dequeue_style('codemirror-blocks-');
+    wp_dequeue_style('codemirror');
 }
 
 add_action('wp_enqueue_scripts', 'dequeue_css_header');
 
 //CSSファイルをフッターに出力
 function enqueue_css_footer() {
-
-    wp_enqueue_style('wp-block-library');
 
     wp_enqueue_style('addtoany');
 }
@@ -219,23 +219,34 @@ function getNowActive() {
     $cat['knowledge'] = '';
     $cat['seminar'] = '';
     $cat['topics'] = '';
+    $cat['diary'] = '';
     $cat['NowCatID'] = 1;
+    $url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
     if (is_home()) {
         $cat['knowledge'] = 'active';
         $cat['NowCatID'] = 1;
     }
     if (is_category()) {
-        if (cat_is_ancestor_of(1, $cat) or is_category(1)) {
+        if (false !== strpos($url, 'diary')) {
+                $cat['diary'] = 'active';
+                $cat['NowCatID'] = 64;
+        } elseif (cat_is_ancestor_of(1, $cat) or is_category(1)) {
             $cat['knowledge'] = 'active';
             $cat['NowCatID'] = 1;
         } elseif (cat_is_ancestor_of(2, $cat) or is_category(2)) {
             $cat['seminar'] = 'active';
             $cat['NowCatID'] = 2;
-        } elseif (cat_is_ancestor_of(51, $cat) or is_category(51)) {
+        } 
+        elseif (cat_is_ancestor_of(51, $cat) or is_category(51)) {
             $cat['topics'] = 'active';
             $cat['NowCatID'] = 51;
-        } else {
+        } 
+        elseif (cat_is_ancestor_of(64, $cat) or is_category(64)) {
+            $cat['diary'] = 'active';
+            $cat['NowCatID'] = 64;
+        } 
+        else {
             $cat['knowledge'] = 'active';
             $cat['NowCatID'] = 1;
         }
@@ -250,7 +261,11 @@ function getNowActive() {
         } elseif (in_category(51) || post_is_in_descendant_category(51)) {
             $cat['topics'] = 'active';
             $cat['NowCatID'] = 51;
-        } else {
+        } elseif (in_category(64) || post_is_in_descendant_category(64)) {
+            $cat['diary'] = 'active';
+            $cat['NowCatID'] = 64;
+        } 
+        else {
             $cat['knowledge'] = 'active';
             $cat['NowCatID'] = 1;
         }
@@ -309,3 +324,15 @@ function outputAllArticle(){
     $posts = $count_posts->publish;
     return $posts;
 }
+function adjust_category_paged( $query = []) {
+  if (isset($query['name'])
+   && $query['name'] === 'page'
+   && isset($query['page'])
+   && isset($query['category_name'])) {
+    $query['paged'] = intval($query['page']); // 念のため整数化しておく
+    unset($query['name']);
+    unset($query['page']);
+  }
+  return $query;
+}
+add_filter('request', 'adjust_category_paged');

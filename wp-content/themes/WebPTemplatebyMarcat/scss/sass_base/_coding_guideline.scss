@@ -40,15 +40,20 @@ body {
     flex-flow: row wrap;
 }
 body {
-    font-family: 'Noto Sans JP', sans-serif;
-    @include imgwidth();
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    
     @include rsFontSize(16,16,14);
     color: #323232;
     font-weight: 400;
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
 }
 body {
     input,textarea,button {
-        font-family: 'Noto Sans JP', sans-serif;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
         @include rsFontSize(16,16,14);
         font-weight: 400;
     }

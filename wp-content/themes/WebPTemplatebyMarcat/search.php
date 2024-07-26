@@ -10,6 +10,9 @@ elseif($searchCatID===2){
 elseif($searchCatID===51) {
     get_template_part('include_files/search/searchTopics');
 }
+elseif($searchCatID===64) {
+    get_template_part('include_files/search/searchDiary');
+}
 else {
     get_template_part('include_files/search/searchKnowledge');
 }

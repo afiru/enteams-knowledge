@@ -1,5 +1,12 @@
-<?php $paged = get_query_var('paged', 1); ?>
-<?php $args="cat=$cat&posts_per_page=200&order=ASC&orderby=menu_order&paged=$paged"; ?>
+<?php 
+    $bookmarksIDs = nowBookmarksIDs();
+    $args=[
+        'posts_per_page'=>'-1',
+        'post__in'=>$bookmarksIDs,
+        'order' =>'ASC',
+        'orderby'=>'menu_order'
+        ];
+?>
 <?php $query1 = new WP_Query( $args ); ?>
 <?php if ( $query1->have_posts() ): ?>
     <div class="display_flex_stretch display_row postKnowledgeLoopFx">

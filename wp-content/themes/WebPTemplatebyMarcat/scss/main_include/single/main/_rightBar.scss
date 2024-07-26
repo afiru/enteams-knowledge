@@ -1,5 +1,5 @@
 .rightBar {
-    @include ontener_width(830 , 180);
+    @include ontener_width(920 , 180);
     order: 2;
     @include media($sp) {
         width: 100%;

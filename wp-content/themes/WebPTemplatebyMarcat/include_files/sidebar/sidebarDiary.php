@@ -1,6 +1,6 @@
 <div class="bg_fff sidebarKnowledge">
     <h1 class="sp_only t_center h1sidebarKnowledge jsh1sidebarKnowledge">KNOWLEDGE MENU</h1>
-    <?php $categories = get_categories("parent=1&hide_empty=1&orderby=id&order=asc"); ?>
+    <?php $categories = get_categories("parent=64&hide_empty=1&orderby=id&order=asc"); ?>
     <div class="jsnavSidebarKnowledge navSidebarKnowledgeLxc">
     <?php foreach ($categories as $categorie): ?>    
         <nav class="navSidebarKnowledge <?php echo $categorie->slug; ?>NavSidebarKnowledge">

@@ -12,7 +12,7 @@
 .postTopicsLoopFx {
     background: #FFF;
     @include kadomaru(10px);
-    @include paddingPercent(1200 , 10 , 20 , 20 , 20 );
+    @include paddingPercent(1200 , 20 , 20 , 20 , 20 );
     @include media($sp) {
         @include paddingPercent(375 , 10 , 20 , 10 , 20 );
     }
